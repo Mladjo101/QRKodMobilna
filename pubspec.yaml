@@ -46,6 +46,7 @@ dependencies:
   firebase_core: ^1.24.0
   firebase_messaging: ^13.0.4
   flutter_local_notifications: ^11.0.1
+  flutter_launcher_icons: ^0.10.0
 
 dev_dependencies:
   flutter_test:
@@ -102,3 +103,8 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/ic_launcher/1024.png"

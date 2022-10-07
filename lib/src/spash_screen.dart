@@ -6,17 +6,16 @@ import 'config/color_constants.dart';
 import 'config/image_constants.dart';
 
 class SplashScreen extends ConsumerWidget {
-  const SplashScreen({Key? key}) : super(key: key);
+  SplashScreen({Key? key}) : super(key: key);
 
-  void navigate(context, ruta) {
-    Future.microtask(() => Navigator.pushNamed(context, ruta));
-  }
-
+  @override
   Widget build(BuildContext context, WidgetRef ref) {
     var authState = ref.watch(authProvider).identity;
     bool authIsLoading = ref.watch(authProvider).isLoading;
 
-    if (!authIsLoading) {
+    bool notificationOpened = ref.watch(authProvider).notificationOpened;
+
+    if (!authIsLoading && !notificationOpened) {
       if (authState != null) {
         Future.microtask(() =>
             Navigator.pushNamedAndRemoveUntil(context, '/home', (r) => false));

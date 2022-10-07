@@ -24,6 +24,10 @@ class Feature2State extends ConsumerState<Feature2> {
             AppLocalizations.of(context)!.feaure2 + "\n" + identity!.punoIme,
             style: const TextStyle(fontSize: 24),
           ),
+        ),
+        ElevatedButton(
+          onPressed: () => Navigator.pushNamed(context, "/second"),
+          child: Text("Go to second"),
         )
       ],
     );

@@ -18,6 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$AuthState {
   AuthModel? get identity => throw _privateConstructorUsedError;
   bool get isLoading => throw _privateConstructorUsedError;
+  bool get notificationOpened => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $AuthStateCopyWith<AuthState> get copyWith =>
@@ -28,7 +29,7 @@ mixin _$AuthState {
 abstract class $AuthStateCopyWith<$Res> {
   factory $AuthStateCopyWith(AuthState value, $Res Function(AuthState) then) =
       _$AuthStateCopyWithImpl<$Res>;
-  $Res call({AuthModel? identity, bool isLoading});
+  $Res call({AuthModel? identity, bool isLoading, bool notificationOpened});
 
   $AuthModelCopyWith<$Res>? get identity;
 }
@@ -45,6 +46,7 @@ class _$AuthStateCopyWithImpl<$Res> implements $AuthStateCopyWith<$Res> {
   $Res call({
     Object? identity = freezed,
     Object? isLoading = freezed,
+    Object? notificationOpened = freezed,
   }) {
     return _then(_value.copyWith(
       identity: identity == freezed
@@ -54,6 +56,10 @@ class _$AuthStateCopyWithImpl<$Res> implements $AuthStateCopyWith<$Res> {
       isLoading: isLoading == freezed
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      notificationOpened: notificationOpened == freezed
+          ? _value.notificationOpened
+          : notificationOpened // ignore: cast_nullable_to_non_nullable
               as bool,
     ));
   }
@@ -76,7 +82,7 @@ abstract class _$$_AuthStateCopyWith<$Res> implements $AuthStateCopyWith<$Res> {
           _$_AuthState value, $Res Function(_$_AuthState) then) =
       __$$_AuthStateCopyWithImpl<$Res>;
   @override
-  $Res call({AuthModel? identity, bool isLoading});
+  $Res call({AuthModel? identity, bool isLoading, bool notificationOpened});
 
   @override
   $AuthModelCopyWith<$Res>? get identity;
@@ -96,6 +102,7 @@ class __$$_AuthStateCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
   $Res call({
     Object? identity = freezed,
     Object? isLoading = freezed,
+    Object? notificationOpened = freezed,
   }) {
     return _then(_$_AuthState(
       identity: identity == freezed
@@ -106,6 +113,10 @@ class __$$_AuthStateCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
               as bool,
+      notificationOpened: notificationOpened == freezed
+          ? _value.notificationOpened
+          : notificationOpened // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -113,17 +124,22 @@ class __$$_AuthStateCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_AuthState extends _AuthState {
-  const _$_AuthState({this.identity, this.isLoading = true}) : super._();
+  const _$_AuthState(
+      {this.identity, this.isLoading = true, this.notificationOpened = false})
+      : super._();
 
   @override
   final AuthModel? identity;
   @override
   @JsonKey()
   final bool isLoading;
+  @override
+  @JsonKey()
+  final bool notificationOpened;
 
   @override
   String toString() {
-    return 'AuthState(identity: $identity, isLoading: $isLoading)';
+    return 'AuthState(identity: $identity, isLoading: $isLoading, notificationOpened: $notificationOpened)';
   }
 
   @override
@@ -132,14 +148,17 @@ class _$_AuthState extends _AuthState {
         (other.runtimeType == runtimeType &&
             other is _$_AuthState &&
             const DeepCollectionEquality().equals(other.identity, identity) &&
-            const DeepCollectionEquality().equals(other.isLoading, isLoading));
+            const DeepCollectionEquality().equals(other.isLoading, isLoading) &&
+            const DeepCollectionEquality()
+                .equals(other.notificationOpened, notificationOpened));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(identity),
-      const DeepCollectionEquality().hash(isLoading));
+      const DeepCollectionEquality().hash(isLoading),
+      const DeepCollectionEquality().hash(notificationOpened));
 
   @JsonKey(ignore: true)
   @override
@@ -148,14 +167,18 @@ class _$_AuthState extends _AuthState {
 }
 
 abstract class _AuthState extends AuthState {
-  const factory _AuthState({final AuthModel? identity, final bool isLoading}) =
-      _$_AuthState;
+  const factory _AuthState(
+      {final AuthModel? identity,
+      final bool isLoading,
+      final bool notificationOpened}) = _$_AuthState;
   const _AuthState._() : super._();
 
   @override
   AuthModel? get identity;
   @override
   bool get isLoading;
+  @override
+  bool get notificationOpened;
   @override
   @JsonKey(ignore: true)
   _$$_AuthStateCopyWith<_$_AuthState> get copyWith =>

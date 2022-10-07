@@ -15,6 +15,7 @@ abstract class AuthState with _$AuthState {
   const factory AuthState({
     AuthModel? identity,
     @Default(true) bool isLoading,
+    @Default(false) bool notificationOpened,
   }) = _AuthState;
 
   const AuthState._();
@@ -68,5 +69,13 @@ class AuthNotifier extends StateNotifier<AuthState> {
       state = state.copyWith(isLoading: false);
       return false;
     }
+  }
+
+  notificationOpened() {
+    state = state.copyWith(notificationOpened: true);
+  }
+
+  notificationClosed() {
+    state = state.copyWith(notificationOpened: false);
   }
 }

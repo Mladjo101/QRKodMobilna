@@ -5,7 +5,11 @@
     <application
         android:label="starter_project_flutter"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher"
+        >
+        <meta-data
+          android:name="com.google.firebase.messaging.default_notification_icon"
+          android:resource="@mipmap/ic_stat_fs" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

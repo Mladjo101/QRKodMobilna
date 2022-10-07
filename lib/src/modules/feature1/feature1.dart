@@ -14,8 +14,9 @@ class Feature1 extends ConsumerStatefulWidget {
 
 class Feature1State extends ConsumerState<Feature1> {
   Future<void> logout() async {
+    final navigator = Navigator.of(context);
     await singleton.get<SharedPreferencesHelper>().removeIdentity();
-    Navigator.pushNamedAndRemoveUntil(context, "/auth", (route) => false);
+    navigator.pushNamedAndRemoveUntil("/auth", (route) => false);
   }
 
   @override
