@@ -16,7 +16,7 @@ class SecondPageState extends State<SecondPage> {
 
   @override
   void initState() {
-    modeli = SifarnikService().get(ESifarnik.SifModel);
+    modeli = SifarnikService().get(ESifarnik.SifMarka);
     super.initState();
   }
 
@@ -24,7 +24,7 @@ class SecondPageState extends State<SecondPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Second Page'),
+        title: const Text('Second Page'),
       ),
       body: Center(
         child: FutureBuilder<List<SifarnikModel>>(
