@@ -1,7 +1,4 @@
-// package we need for json encode/decode
-import 'dart:io';
 import 'package:dio/dio.dart';
-import 'package:dio/adapter.dart';
 import 'package:starter_project_flutter/src/services/base_service.dart';
 
 import '../data/models/response/base/postavke/postavke_model.dart';

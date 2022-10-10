@@ -42,7 +42,7 @@ class DioInterceptor extends Interceptor {
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
     if (options.headers["No-Authorization"] != true && identity != null) {
-      options.headers['Authorization'] = identity!.token;
+      options.headers['Authorization'] = "Bearer " + identity!.token;
     }
     super.onRequest(options, handler);
   }
