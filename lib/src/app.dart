@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:starter_project_flutter/src/helpers/route_helper.dart';
 import 'package:starter_project_flutter/src/spash_screen.dart';
 
 import 'config/theme_config.dart';
@@ -43,6 +44,7 @@ class AppState extends ConsumerState<App> {
       theme: ThemeConfig.lightTheme,
       darkTheme: ThemeConfig.darkTheme,
       //themeMode: appState.isDarkMode ? ThemeMode.dark : ThemeMode.light,
+      navigatorObservers: [RouteHelper.routeObserver],
       initialRoute: (routeToGo != null) ? routeToGo : '/',
       onGenerateRoute: routes,
       home: SplashScreen(),
