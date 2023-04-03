@@ -60,9 +60,14 @@ class AuthNotifier extends StateNotifier<AuthState> {
         role: userInfo.role,
         ulogaId: userInfo.ulogaId,
       );
+      var todaysDate = DateTime.now();
+      var dateOfExpiration =
+          todaysDate.add(Duration(seconds: token.expires_in));
 
       singleton.get<SharedPreferencesHelper>().setIdentity(model);
-
+      singleton
+          .get<SharedPreferencesHelper>()
+          .setExpirationDate(dateOfExpiration);
       state = state.copyWith(identity: model, isLoading: false);
       return true;
     } catch (e) {

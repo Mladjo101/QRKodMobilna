@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:starter_project_flutter/src/identity/auth_provider.dart';
+import 'package:starter_project_flutter/src/startup.dart';
 
 import 'config/color_constants.dart';
 import 'config/image_constants.dart';
 import 'helpers/route_helper.dart';
+import 'helpers/shared_preferences.dart';
 
 class SplashScreen extends ConsumerStatefulWidget {
   SplashScreen({Key? key}) : super(key: key);
@@ -38,11 +40,24 @@ class SplashScreenState extends ConsumerState<SplashScreen> with RouteAware {
   Widget build(BuildContext context) {
     var authState = ref.watch(authProvider).identity;
     bool authIsLoading = ref.watch(authProvider).isLoading;
-
+    var infoINeed =
+        singleton.get<SharedPreferencesHelper>().getExpirationDate();
     bool notificationOpened = ref.watch(authProvider).notificationOpened;
+    DateTime todaysDate = DateTime.now();
+    DateTime twoDaysAfter = todaysDate.add(Duration(days: 2));
 
     if (!authIsLoading && (!notificationOpened || notificationClosed)) {
       if (authState != null) {
+        if (singleton.get<SharedPreferencesHelper>().getExpirationDate() !=
+            null) {
+          if (singleton
+              .get<SharedPreferencesHelper>()
+              .getExpirationDate()!
+              .isBefore(twoDaysAfter)) {
+            Future.microtask(() => Navigator.pushNamedAndRemoveUntil(
+                context, '/auth', (r) => false));
+          }
+        }
         Future.microtask(() =>
             Navigator.pushNamedAndRemoveUntil(context, '/home', (r) => false));
       } else {

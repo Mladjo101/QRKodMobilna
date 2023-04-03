@@ -10,7 +10,7 @@ import '../data/models/response/user/user_info_model/user_info_model.dart';
 class AuthService {
   late final Dio _dio = Dio(
     BaseOptions(
-      baseUrl: 'https://192.168.0.184:45455',
+      baseUrl: 'https://192.168.1.105:45455/',
       connectTimeout: 5000,
       receiveTimeout: 3000,
       responseType: ResponseType.json,

@@ -22,7 +22,7 @@ abstract class BaseService {
 class DioClient {
   final _dio = Dio(
     BaseOptions(
-      baseUrl: 'http://192.168.0.184:45456',
+      baseUrl: 'http://192.168.1.105:45456/',
       connectTimeout: 5000,
       receiveTimeout: 3000,
       responseType: ResponseType.json,
@@ -50,6 +50,8 @@ class DioInterceptor extends Interceptor {
   @override
   void onResponse(Response response, ResponseInterceptorHandler handler) {
     // TODO: implement onResponse
+    if (response.statusCode == 401)
+      singleton.get<SharedPreferencesHelper>().removeIdentity();
     super.onResponse(response, handler);
   }
 

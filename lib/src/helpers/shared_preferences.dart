@@ -33,4 +33,14 @@ class SharedPreferencesHelper {
     }
     return null;
   }
+
+  Future<void> setExpirationDate(DateTime expirationDate) async {
+    await prefs.setString('expirationDate', expirationDate.toString());
+  }
+
+  DateTime? getExpirationDate() {
+    final String? state = prefs.getString('expirationDate');
+    if (state != null) return DateTime.parse(state);
+    return null;
+  }
 }
