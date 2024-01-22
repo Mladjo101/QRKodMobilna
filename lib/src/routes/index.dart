@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:starter_project_flutter/src/modules/feature1/qrpage.dart';
 import 'package:starter_project_flutter/src/modules/feature2/second_page/second_page.dart';
 
 import '../modules/auth/login_screen.dart';
@@ -23,7 +24,9 @@ Route routes(RouteSettings settings) {
     case '/second':
       return MaterialPageRoute(builder: (_) => const SecondPage());
     case '/feature3':
-      return MaterialPageRoute(builder: (_) => const Feature3());
+      return MaterialPageRoute(builder: (_) => ProfilePageContent());
+    case '/qr':
+      return MaterialPageRoute(builder: (_) => const QRPage());
     default:
       return MaterialPageRoute(builder: (_) => SplashScreen());
   }

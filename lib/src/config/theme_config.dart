@@ -6,30 +6,30 @@ import 'color_constants.dart';
 
 class ThemeConfig {
   static ThemeData get darkTheme => createTheme(
-        brightness: Brightness.dark,
-        background: ColorConstants.darkScaffoldBackgroundColor,
-        cardBackground: ColorConstants.secondaryDarkAppColor,
-        primaryText: Colors.white,
+        brightness: Brightness.light,
+        background: Colors.white,
+        cardBackground: Colors.white,
+        primaryText: Colors.black,
         secondaryText: Colors.black,
-        accentColor: ColorConstants.secondaryDarkAppColor,
-        divider: Colors.black45,
-        buttonBackground: Colors.white,
-        buttonText: ColorConstants.secondaryDarkAppColor,
-        disabled: ColorConstants.secondaryDarkAppColor,
+        accentColor: Colors.white,
+        divider: Colors.black,
+        buttonBackground: Colors.black38,
+        buttonText: Colors.black,
+        disabled: Colors.white,
         error: Colors.red,
       );
 
   static ThemeData get lightTheme => createTheme(
         brightness: Brightness.light,
-        background: ColorConstants.lightScaffoldBackgroundColor,
-        cardBackground: ColorConstants.secondaryAppColor,
+        background: Colors.white,
+        cardBackground: Colors.white,
         primaryText: Colors.black,
-        secondaryText: Colors.white,
-        accentColor: ColorConstants.secondaryAppColor,
-        divider: ColorConstants.secondaryAppColor,
+        secondaryText: Colors.black,
+        accentColor: Colors.white,
+        divider: Colors.black,
         buttonBackground: Colors.black38,
-        buttonText: ColorConstants.secondaryAppColor,
-        disabled: ColorConstants.secondaryAppColor,
+        buttonText: Colors.black,
+        disabled: Colors.white,
         error: Colors.red,
       );
 

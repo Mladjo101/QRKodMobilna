@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:starter_project_flutter/src/config/color_constants.dart';
 import 'package:starter_project_flutter/src/helpers/notification_helper.dart';
 import 'package:starter_project_flutter/src/modules/feature1/feature1.dart';
 import 'package:starter_project_flutter/src/modules/feature2/feature2.dart';
@@ -21,9 +22,9 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
   final widgetOptions = [
     new Feature1(),
     new Feature2(),
-    new Feature3(),
+    new ProfilePageContent(),
   ];
-  final widgetTitle = ["Feature 1", "Feature 2", "Feature 3"];
+  final widgetTitle = ["Prisustva", "Historija", "Profil"];
   final navigatorKey = GlobalKey<NavigatorState>();
 
   void onItemTapped(int index) {
@@ -38,38 +39,40 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
       appBar: AppBar(
         title: Text(
           widgetTitle.elementAt(selectedIndex),
-          style: const TextStyle(color: Colors.black),
+          style: const TextStyle(color: Colors.white),
         ),
-        backgroundColor: Colors.transparent,
+        backgroundColor: hexToColor("#182138"),
         elevation: 0,
       ),
       body: Center(
         child: widgetOptions.elementAt(selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: hexToColor("#182138"),
         key: navigatorKey,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
               icon: Icon(
-                Icons.messenger,
-                color: Colors.blue,
+                Icons.done_all_sharp,
+                color: Colors.white,
               ),
-              label: "Feature 1"),
+              label: "Prisustva"),
           BottomNavigationBarItem(
               icon: Icon(
-                Icons.stacked_line_chart_outlined,
-                color: Colors.blue,
+                Icons.class_outlined,
+                color: Colors.white,
               ),
-              label: "Feature 2"),
+              label: "Predmeti"),
           BottomNavigationBarItem(
               icon: Icon(
-                Icons.call,
-                color: Colors.blue,
+                Icons.person_2_sharp,
+                color: Colors.white,
               ),
-              label: "Feature 3"),
+              label: "Profil"),
         ],
         currentIndex: selectedIndex,
-        fixedColor: Colors.deepPurple,
+        fixedColor: Colors.white,
+        unselectedItemColor: Colors.white,
         onTap: onItemTapped,
         selectedLabelStyle: const TextStyle(color: Colors.red, fontSize: 20),
       ),

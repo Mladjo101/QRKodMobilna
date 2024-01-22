@@ -38,36 +38,36 @@ class SplashScreenState extends ConsumerState<SplashScreen> with RouteAware {
 
   @override
   Widget build(BuildContext context) {
-    var authState = ref.watch(authProvider).identity;
-    bool authIsLoading = ref.watch(authProvider).isLoading;
-    var infoINeed =
-        singleton.get<SharedPreferencesHelper>().getExpirationDate();
-    bool notificationOpened = ref.watch(authProvider).notificationOpened;
-    DateTime todaysDate = DateTime.now();
-    DateTime twoDaysAfter = todaysDate.add(Duration(days: 2));
-
-    if (!authIsLoading && (!notificationOpened || notificationClosed)) {
-      if (authState != null) {
-        if (singleton.get<SharedPreferencesHelper>().getExpirationDate() !=
-            null) {
-          if (singleton
-              .get<SharedPreferencesHelper>()
-              .getExpirationDate()!
-              .isBefore(twoDaysAfter)) {
-            Future.microtask(() => Navigator.pushNamedAndRemoveUntil(
-                context, '/auth', (r) => false));
-          }
-        }
-        Future.microtask(() =>
-            Navigator.pushNamedAndRemoveUntil(context, '/home', (r) => false));
-      } else {
-        Future.microtask(() =>
-            Navigator.pushNamedAndRemoveUntil(context, '/auth', (r) => false));
-      }
-    }
+    // var authState = ref.watch(authProvider).identity;
+    // bool authIsLoading = ref.watch(authProvider).isLoading;
+    // var infoINeed = singleton.get<SharedPreferencesHelper>().getExpirationDate();
+    // bool notificationOpened = ref.watch(authProvider).notificationOpened;
+    // DateTime todaysDate = DateTime.now();
+    // DateTime twoDaysAfter = todaysDate.add(Duration(days: 2));
+    Future.microtask(() =>
+        Navigator.pushNamedAndRemoveUntil(context, '/auth', (r) => false));
+    // if (!authIsLoading && (!notificationOpened || notificationClosed)) {
+    //   if (authState != null) {
+    //     if (singleton.get<SharedPreferencesHelper>().getExpirationDate() !=
+    //         null) {
+    //       if (singleton
+    //           .get<SharedPreferencesHelper>()
+    //           .getExpirationDate()!
+    //           .isBefore(twoDaysAfter)) {
+    //         Future.microtask(() => Navigator.pushNamedAndRemoveUntil(
+    //             context, '/auth', (r) => false));
+    //       }
+    //     }
+    //   Future.microtask(() =>
+    //       Navigator.pushNamedAndRemoveUntil(context, '/home', (r) => false));
+    // } else {
+    //   Future.microtask(() =>
+    //       Navigator.pushNamedAndRemoveUntil(context, '/auth', (r) => false));
+    // }
+    // }
 
     return Scaffold(
-      backgroundColor: ColorConstants.secondaryAppColor,
+      backgroundColor: Colors.white,
       body: Center(
         child: Image.asset(AllImages().logo),
       ),

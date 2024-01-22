@@ -16,5 +16,8 @@
   "logout": "Log out",
   "login_failed": "Login failed",
   "username": "Username",
-  "password": "Password"
+  "password": "Password",
+
+    "@ATENDANCE": {}, 
+  "atendance": "Atendance"
 }

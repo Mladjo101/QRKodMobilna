@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -13,20 +12,24 @@ import 'config/theme_config.dart';
 import 'helpers/notification_helper.dart';
 import 'routes/index.dart';
 
-class App extends ConsumerStatefulWidget with NotificationHelper {
+class App extends ConsumerStatefulWidget {
+  //with NotificationHelper
   App({Key? key}) : super(key: key);
   @override
   AppState createState() => AppState();
 }
 
 class AppState extends ConsumerState<App> {
+  final GlobalKey<NavigatorState> navigatorKey =
+      GlobalKey(debugLabel: "Main Navigator");
+  String routeToGo = '/';
   @override
   void initState() {
     super.initState();
 
     // Run code required to handle interacted messages in an async function
     // as initState() must not be async
-    widget.setupInteractedMessage(ref);
+    // widget.setupInteractedMessage(ref);
   }
 
   @override

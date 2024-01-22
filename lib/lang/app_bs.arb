@@ -13,5 +13,8 @@
   "logout": "Odjavi se",
   "login_failed": "Prijava neuspješna",
   "username": "Korisničko ime",
-  "password": "Lozinka"
+  "password": "Lozinka",
+
+    "@ATTENDANCE": {}, 
+  "atendance": "Prisustvo"
 }

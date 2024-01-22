@@ -1,27 +1,55 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:starter_project_flutter/src/config/color_constants.dart';
 
-class Feature3 extends ConsumerStatefulWidget {
-  const Feature3({Key? key}) : super(key: key);
-
-  @override
-  Feature3State createState() => Feature3State();
-}
-
-class Feature3State extends ConsumerState<Feature3> {
+class ProfilePageContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Center(
-          child: Text(
-            AppLocalizations.of(context)!.feaure3,
-            style: const TextStyle(fontSize: 24),
+    return SingleChildScrollView(
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            SizedBox(height: 20),
+            CircleAvatar(
+              radius: 50, // Adjust the size as needed
+              backgroundImage: AssetImage(
+                  'assets/avatar.jpg'), // Placeholder for profile picture
+            ),
+            SizedBox(height: 20),
+            _buildProfileField('Name', 'John Doe'),
+            _buildProfileField('Surname', 'Doe'),
+            _buildProfileField('Index Number', '123456'),
+            _buildProfileField('Email', 'john.doe@example.com'),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildProfileField(String label, String value) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Text(
+            label,
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+              color: hexToColor("#182138"),
+            ),
           ),
-        )
-      ],
+          Text(
+            value,
+            style: TextStyle(
+              fontSize: 18,
+              color: hexToColor("#00426C"),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
