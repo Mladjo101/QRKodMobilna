@@ -8,12 +8,20 @@ part of 'role_list_model.dart';
 
 _$_RoleListModel _$$_RoleListModelFromJson(Map<String, dynamic> json) =>
     _$_RoleListModel(
-      items: (json['items'] as List<dynamic>)
-          .map((e) => RoleListModelItem.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      email: json['email'] as String?,
+      firstName: json['firstName'] as String?,
+      lastName: json['lastName'] as String?,
+      dateOfBirth: json['dateOfBirth'] == null
+          ? null
+          : DateTime.parse(json['dateOfBirth'] as String),
+      token: json['token'] as String?,
     );
 
 Map<String, dynamic> _$$_RoleListModelToJson(_$_RoleListModel instance) =>
     <String, dynamic>{
-      'items': instance.items,
+      'email': instance.email,
+      'firstName': instance.firstName,
+      'lastName': instance.lastName,
+      'dateOfBirth': instance.dateOfBirth?.toIso8601String(),
+      'token': instance.token,
     };

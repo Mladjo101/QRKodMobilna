@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'role_list_model.dart';
 
@@ -20,7 +20,11 @@ RoleListModel _$RoleListModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$RoleListModel {
-  List<RoleListModelItem> get items => throw _privateConstructorUsedError;
+  String? get email => throw _privateConstructorUsedError;
+  String? get firstName => throw _privateConstructorUsedError;
+  String? get lastName => throw _privateConstructorUsedError;
+  DateTime? get dateOfBirth => throw _privateConstructorUsedError;
+  String? get token => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -32,29 +36,57 @@ mixin _$RoleListModel {
 abstract class $RoleListModelCopyWith<$Res> {
   factory $RoleListModelCopyWith(
           RoleListModel value, $Res Function(RoleListModel) then) =
-      _$RoleListModelCopyWithImpl<$Res>;
-  $Res call({List<RoleListModelItem> items});
+      _$RoleListModelCopyWithImpl<$Res, RoleListModel>;
+  @useResult
+  $Res call(
+      {String? email,
+      String? firstName,
+      String? lastName,
+      DateTime? dateOfBirth,
+      String? token});
 }
 
 /// @nodoc
-class _$RoleListModelCopyWithImpl<$Res>
+class _$RoleListModelCopyWithImpl<$Res, $Val extends RoleListModel>
     implements $RoleListModelCopyWith<$Res> {
   _$RoleListModelCopyWithImpl(this._value, this._then);
 
-  final RoleListModel _value;
   // ignore: unused_field
-  final $Res Function(RoleListModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? items = freezed,
+    Object? email = freezed,
+    Object? firstName = freezed,
+    Object? lastName = freezed,
+    Object? dateOfBirth = freezed,
+    Object? token = freezed,
   }) {
     return _then(_value.copyWith(
-      items: items == freezed
-          ? _value.items
-          : items // ignore: cast_nullable_to_non_nullable
-              as List<RoleListModelItem>,
-    ));
+      email: freezed == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String?,
+      firstName: freezed == firstName
+          ? _value.firstName
+          : firstName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      lastName: freezed == lastName
+          ? _value.lastName
+          : lastName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dateOfBirth: freezed == dateOfBirth
+          ? _value.dateOfBirth
+          : dateOfBirth // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      token: freezed == token
+          ? _value.token
+          : token // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
   }
 }
 
@@ -65,29 +97,53 @@ abstract class _$$_RoleListModelCopyWith<$Res>
           _$_RoleListModel value, $Res Function(_$_RoleListModel) then) =
       __$$_RoleListModelCopyWithImpl<$Res>;
   @override
-  $Res call({List<RoleListModelItem> items});
+  @useResult
+  $Res call(
+      {String? email,
+      String? firstName,
+      String? lastName,
+      DateTime? dateOfBirth,
+      String? token});
 }
 
 /// @nodoc
 class __$$_RoleListModelCopyWithImpl<$Res>
-    extends _$RoleListModelCopyWithImpl<$Res>
+    extends _$RoleListModelCopyWithImpl<$Res, _$_RoleListModel>
     implements _$$_RoleListModelCopyWith<$Res> {
   __$$_RoleListModelCopyWithImpl(
       _$_RoleListModel _value, $Res Function(_$_RoleListModel) _then)
-      : super(_value, (v) => _then(v as _$_RoleListModel));
+      : super(_value, _then);
 
-  @override
-  _$_RoleListModel get _value => super._value as _$_RoleListModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? items = freezed,
+    Object? email = freezed,
+    Object? firstName = freezed,
+    Object? lastName = freezed,
+    Object? dateOfBirth = freezed,
+    Object? token = freezed,
   }) {
     return _then(_$_RoleListModel(
-      items: items == freezed
-          ? _value._items
-          : items // ignore: cast_nullable_to_non_nullable
-              as List<RoleListModelItem>,
+      email: freezed == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String?,
+      firstName: freezed == firstName
+          ? _value.firstName
+          : firstName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      lastName: freezed == lastName
+          ? _value.lastName
+          : lastName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dateOfBirth: freezed == dateOfBirth
+          ? _value.dateOfBirth
+          : dateOfBirth // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      token: freezed == token
+          ? _value.token
+          : token // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -95,22 +151,30 @@ class __$$_RoleListModelCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_RoleListModel implements _RoleListModel {
-  _$_RoleListModel({required final List<RoleListModelItem> items})
-      : _items = items;
+  _$_RoleListModel(
+      {this.email,
+      this.firstName,
+      this.lastName,
+      this.dateOfBirth,
+      this.token});
 
   factory _$_RoleListModel.fromJson(Map<String, dynamic> json) =>
       _$$_RoleListModelFromJson(json);
 
-  final List<RoleListModelItem> _items;
   @override
-  List<RoleListModelItem> get items {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_items);
-  }
+  final String? email;
+  @override
+  final String? firstName;
+  @override
+  final String? lastName;
+  @override
+  final DateTime? dateOfBirth;
+  @override
+  final String? token;
 
   @override
   String toString() {
-    return 'RoleListModel(items: $items)';
+    return 'RoleListModel(email: $email, firstName: $firstName, lastName: $lastName, dateOfBirth: $dateOfBirth, token: $token)';
   }
 
   @override
@@ -118,16 +182,24 @@ class _$_RoleListModel implements _RoleListModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_RoleListModel &&
-            const DeepCollectionEquality().equals(other._items, _items));
+            (identical(other.email, email) || other.email == email) &&
+            (identical(other.firstName, firstName) ||
+                other.firstName == firstName) &&
+            (identical(other.lastName, lastName) ||
+                other.lastName == lastName) &&
+            (identical(other.dateOfBirth, dateOfBirth) ||
+                other.dateOfBirth == dateOfBirth) &&
+            (identical(other.token, token) || other.token == token));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_items));
+      Object.hash(runtimeType, email, firstName, lastName, dateOfBirth, token);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_RoleListModelCopyWith<_$_RoleListModel> get copyWith =>
       __$$_RoleListModelCopyWithImpl<_$_RoleListModel>(this, _$identity);
 
@@ -140,14 +212,26 @@ class _$_RoleListModel implements _RoleListModel {
 }
 
 abstract class _RoleListModel implements RoleListModel {
-  factory _RoleListModel({required final List<RoleListModelItem> items}) =
-      _$_RoleListModel;
+  factory _RoleListModel(
+      {final String? email,
+      final String? firstName,
+      final String? lastName,
+      final DateTime? dateOfBirth,
+      final String? token}) = _$_RoleListModel;
 
   factory _RoleListModel.fromJson(Map<String, dynamic> json) =
       _$_RoleListModel.fromJson;
 
   @override
-  List<RoleListModelItem> get items;
+  String? get email;
+  @override
+  String? get firstName;
+  @override
+  String? get lastName;
+  @override
+  DateTime? get dateOfBirth;
+  @override
+  String? get token;
   @override
   @JsonKey(ignore: true)
   _$$_RoleListModelCopyWith<_$_RoleListModel> get copyWith =>

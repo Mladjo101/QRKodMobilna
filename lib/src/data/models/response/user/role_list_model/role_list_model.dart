@@ -8,7 +8,11 @@ part 'role_list_model.g.dart';
 @freezed
 class RoleListModel with _$RoleListModel {
   factory RoleListModel({
-    required List<RoleListModelItem> items,
+    String? email,
+    String?  firstName,
+    String?  lastName,
+    DateTime?  dateOfBirth,
+    String?  token,
   }) = _RoleListModel;
 
   factory RoleListModel.fromJson(Map<String, dynamic> json) =>

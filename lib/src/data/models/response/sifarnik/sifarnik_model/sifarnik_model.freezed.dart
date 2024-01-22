@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'sifarnik_model.dart';
 
@@ -39,7 +39,8 @@ mixin _$SifarnikModel {
 abstract class $SifarnikModelCopyWith<$Res> {
   factory $SifarnikModelCopyWith(
           SifarnikModel value, $Res Function(SifarnikModel) then) =
-      _$SifarnikModelCopyWithImpl<$Res>;
+      _$SifarnikModelCopyWithImpl<$Res, SifarnikModel>;
+  @useResult
   $Res call(
       {int id,
       String? naziv,
@@ -52,59 +53,61 @@ abstract class $SifarnikModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SifarnikModelCopyWithImpl<$Res>
+class _$SifarnikModelCopyWithImpl<$Res, $Val extends SifarnikModel>
     implements $SifarnikModelCopyWith<$Res> {
   _$SifarnikModelCopyWithImpl(this._value, this._then);
 
-  final SifarnikModel _value;
   // ignore: unused_field
-  final $Res Function(SifarnikModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? id = null,
     Object? naziv = freezed,
     Object? sifra = freezed,
-    Object? isDeleted = freezed,
-    Object? poredak = freezed,
-    Object? prvi = freezed,
+    Object? isDeleted = null,
+    Object? poredak = null,
+    Object? prvi = null,
     Object? hex = freezed,
     Object? datumIzmjene = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      naziv: naziv == freezed
+      naziv: freezed == naziv
           ? _value.naziv
           : naziv // ignore: cast_nullable_to_non_nullable
               as String?,
-      sifra: sifra == freezed
+      sifra: freezed == sifra
           ? _value.sifra
           : sifra // ignore: cast_nullable_to_non_nullable
               as String?,
-      isDeleted: isDeleted == freezed
+      isDeleted: null == isDeleted
           ? _value.isDeleted
           : isDeleted // ignore: cast_nullable_to_non_nullable
               as bool,
-      poredak: poredak == freezed
+      poredak: null == poredak
           ? _value.poredak
           : poredak // ignore: cast_nullable_to_non_nullable
               as int,
-      prvi: prvi == freezed
+      prvi: null == prvi
           ? _value.prvi
           : prvi // ignore: cast_nullable_to_non_nullable
               as bool,
-      hex: hex == freezed
+      hex: freezed == hex
           ? _value.hex
           : hex // ignore: cast_nullable_to_non_nullable
               as String?,
-      datumIzmjene: datumIzmjene == freezed
+      datumIzmjene: freezed == datumIzmjene
           ? _value.datumIzmjene
           : datumIzmjene // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -115,6 +118,7 @@ abstract class _$$_SifarnikModelCopyWith<$Res>
           _$_SifarnikModel value, $Res Function(_$_SifarnikModel) then) =
       __$$_SifarnikModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int id,
       String? naziv,
@@ -128,56 +132,54 @@ abstract class _$$_SifarnikModelCopyWith<$Res>
 
 /// @nodoc
 class __$$_SifarnikModelCopyWithImpl<$Res>
-    extends _$SifarnikModelCopyWithImpl<$Res>
+    extends _$SifarnikModelCopyWithImpl<$Res, _$_SifarnikModel>
     implements _$$_SifarnikModelCopyWith<$Res> {
   __$$_SifarnikModelCopyWithImpl(
       _$_SifarnikModel _value, $Res Function(_$_SifarnikModel) _then)
-      : super(_value, (v) => _then(v as _$_SifarnikModel));
+      : super(_value, _then);
 
-  @override
-  _$_SifarnikModel get _value => super._value as _$_SifarnikModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? id = null,
     Object? naziv = freezed,
     Object? sifra = freezed,
-    Object? isDeleted = freezed,
-    Object? poredak = freezed,
-    Object? prvi = freezed,
+    Object? isDeleted = null,
+    Object? poredak = null,
+    Object? prvi = null,
     Object? hex = freezed,
     Object? datumIzmjene = freezed,
   }) {
     return _then(_$_SifarnikModel(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      naziv: naziv == freezed
+      naziv: freezed == naziv
           ? _value.naziv
           : naziv // ignore: cast_nullable_to_non_nullable
               as String?,
-      sifra: sifra == freezed
+      sifra: freezed == sifra
           ? _value.sifra
           : sifra // ignore: cast_nullable_to_non_nullable
               as String?,
-      isDeleted: isDeleted == freezed
+      isDeleted: null == isDeleted
           ? _value.isDeleted
           : isDeleted // ignore: cast_nullable_to_non_nullable
               as bool,
-      poredak: poredak == freezed
+      poredak: null == poredak
           ? _value.poredak
           : poredak // ignore: cast_nullable_to_non_nullable
               as int,
-      prvi: prvi == freezed
+      prvi: null == prvi
           ? _value.prvi
           : prvi // ignore: cast_nullable_to_non_nullable
               as bool,
-      hex: hex == freezed
+      hex: freezed == hex
           ? _value.hex
           : hex // ignore: cast_nullable_to_non_nullable
               as String?,
-      datumIzmjene: datumIzmjene == freezed
+      datumIzmjene: freezed == datumIzmjene
           ? _value.datumIzmjene
           : datumIzmjene // ignore: cast_nullable_to_non_nullable
               as DateTime?,
@@ -228,32 +230,26 @@ class _$_SifarnikModel implements _SifarnikModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SifarnikModel &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.naziv, naziv) &&
-            const DeepCollectionEquality().equals(other.sifra, sifra) &&
-            const DeepCollectionEquality().equals(other.isDeleted, isDeleted) &&
-            const DeepCollectionEquality().equals(other.poredak, poredak) &&
-            const DeepCollectionEquality().equals(other.prvi, prvi) &&
-            const DeepCollectionEquality().equals(other.hex, hex) &&
-            const DeepCollectionEquality()
-                .equals(other.datumIzmjene, datumIzmjene));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.naziv, naziv) || other.naziv == naziv) &&
+            (identical(other.sifra, sifra) || other.sifra == sifra) &&
+            (identical(other.isDeleted, isDeleted) ||
+                other.isDeleted == isDeleted) &&
+            (identical(other.poredak, poredak) || other.poredak == poredak) &&
+            (identical(other.prvi, prvi) || other.prvi == prvi) &&
+            (identical(other.hex, hex) || other.hex == hex) &&
+            (identical(other.datumIzmjene, datumIzmjene) ||
+                other.datumIzmjene == datumIzmjene));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(naziv),
-      const DeepCollectionEquality().hash(sifra),
-      const DeepCollectionEquality().hash(isDeleted),
-      const DeepCollectionEquality().hash(poredak),
-      const DeepCollectionEquality().hash(prvi),
-      const DeepCollectionEquality().hash(hex),
-      const DeepCollectionEquality().hash(datumIzmjene));
+  int get hashCode => Object.hash(runtimeType, id, naziv, sifra, isDeleted,
+      poredak, prvi, hex, datumIzmjene);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_SifarnikModelCopyWith<_$_SifarnikModel> get copyWith =>
       __$$_SifarnikModelCopyWithImpl<_$_SifarnikModel>(this, _$identity);
 

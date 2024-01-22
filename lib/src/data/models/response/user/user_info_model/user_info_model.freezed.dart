@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'user_info_model.dart';
 
@@ -43,7 +43,8 @@ mixin _$UserInfoModel {
 abstract class $UserInfoModelCopyWith<$Res> {
   factory $UserInfoModelCopyWith(
           UserInfoModel value, $Res Function(UserInfoModel) then) =
-      _$UserInfoModelCopyWithImpl<$Res>;
+      _$UserInfoModelCopyWithImpl<$Res, UserInfoModel>;
+  @useResult
   $Res call(
       {String dodatneInformacije,
       List<String> dozvoljeneAkcije,
@@ -60,79 +61,81 @@ abstract class $UserInfoModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$UserInfoModelCopyWithImpl<$Res>
+class _$UserInfoModelCopyWithImpl<$Res, $Val extends UserInfoModel>
     implements $UserInfoModelCopyWith<$Res> {
   _$UserInfoModelCopyWithImpl(this._value, this._then);
 
-  final UserInfoModel _value;
   // ignore: unused_field
-  final $Res Function(UserInfoModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? dodatneInformacije = freezed,
-    Object? dozvoljeneAkcije = freezed,
-    Object? email = freezed,
-    Object? email_verified = freezed,
-    Object? frontendModul = freezed,
-    Object? frontendModulNaslov = freezed,
-    Object? name = freezed,
-    Object? preferred_username = freezed,
-    Object? punoIme = freezed,
-    Object? role = freezed,
-    Object? sub = freezed,
-    Object? ulogaId = freezed,
+    Object? dodatneInformacije = null,
+    Object? dozvoljeneAkcije = null,
+    Object? email = null,
+    Object? email_verified = null,
+    Object? frontendModul = null,
+    Object? frontendModulNaslov = null,
+    Object? name = null,
+    Object? preferred_username = null,
+    Object? punoIme = null,
+    Object? role = null,
+    Object? sub = null,
+    Object? ulogaId = null,
   }) {
     return _then(_value.copyWith(
-      dodatneInformacije: dodatneInformacije == freezed
+      dodatneInformacije: null == dodatneInformacije
           ? _value.dodatneInformacije
           : dodatneInformacije // ignore: cast_nullable_to_non_nullable
               as String,
-      dozvoljeneAkcije: dozvoljeneAkcije == freezed
+      dozvoljeneAkcije: null == dozvoljeneAkcije
           ? _value.dozvoljeneAkcije
           : dozvoljeneAkcije // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      email: email == freezed
+      email: null == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String,
-      email_verified: email_verified == freezed
+      email_verified: null == email_verified
           ? _value.email_verified
           : email_verified // ignore: cast_nullable_to_non_nullable
               as bool,
-      frontendModul: frontendModul == freezed
+      frontendModul: null == frontendModul
           ? _value.frontendModul
           : frontendModul // ignore: cast_nullable_to_non_nullable
               as String,
-      frontendModulNaslov: frontendModulNaslov == freezed
+      frontendModulNaslov: null == frontendModulNaslov
           ? _value.frontendModulNaslov
           : frontendModulNaslov // ignore: cast_nullable_to_non_nullable
               as String,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      preferred_username: preferred_username == freezed
+      preferred_username: null == preferred_username
           ? _value.preferred_username
           : preferred_username // ignore: cast_nullable_to_non_nullable
               as String,
-      punoIme: punoIme == freezed
+      punoIme: null == punoIme
           ? _value.punoIme
           : punoIme // ignore: cast_nullable_to_non_nullable
               as String,
-      role: role == freezed
+      role: null == role
           ? _value.role
           : role // ignore: cast_nullable_to_non_nullable
               as String,
-      sub: sub == freezed
+      sub: null == sub
           ? _value.sub
           : sub // ignore: cast_nullable_to_non_nullable
               as String,
-      ulogaId: ulogaId == freezed
+      ulogaId: null == ulogaId
           ? _value.ulogaId
           : ulogaId // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -143,6 +146,7 @@ abstract class _$$_UserInfoModelCopyWith<$Res>
           _$_UserInfoModel value, $Res Function(_$_UserInfoModel) then) =
       __$$_UserInfoModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String dodatneInformacije,
       List<String> dozvoljeneAkcije,
@@ -160,76 +164,74 @@ abstract class _$$_UserInfoModelCopyWith<$Res>
 
 /// @nodoc
 class __$$_UserInfoModelCopyWithImpl<$Res>
-    extends _$UserInfoModelCopyWithImpl<$Res>
+    extends _$UserInfoModelCopyWithImpl<$Res, _$_UserInfoModel>
     implements _$$_UserInfoModelCopyWith<$Res> {
   __$$_UserInfoModelCopyWithImpl(
       _$_UserInfoModel _value, $Res Function(_$_UserInfoModel) _then)
-      : super(_value, (v) => _then(v as _$_UserInfoModel));
+      : super(_value, _then);
 
-  @override
-  _$_UserInfoModel get _value => super._value as _$_UserInfoModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? dodatneInformacije = freezed,
-    Object? dozvoljeneAkcije = freezed,
-    Object? email = freezed,
-    Object? email_verified = freezed,
-    Object? frontendModul = freezed,
-    Object? frontendModulNaslov = freezed,
-    Object? name = freezed,
-    Object? preferred_username = freezed,
-    Object? punoIme = freezed,
-    Object? role = freezed,
-    Object? sub = freezed,
-    Object? ulogaId = freezed,
+    Object? dodatneInformacije = null,
+    Object? dozvoljeneAkcije = null,
+    Object? email = null,
+    Object? email_verified = null,
+    Object? frontendModul = null,
+    Object? frontendModulNaslov = null,
+    Object? name = null,
+    Object? preferred_username = null,
+    Object? punoIme = null,
+    Object? role = null,
+    Object? sub = null,
+    Object? ulogaId = null,
   }) {
     return _then(_$_UserInfoModel(
-      dodatneInformacije: dodatneInformacije == freezed
+      dodatneInformacije: null == dodatneInformacije
           ? _value.dodatneInformacije
           : dodatneInformacije // ignore: cast_nullable_to_non_nullable
               as String,
-      dozvoljeneAkcije: dozvoljeneAkcije == freezed
+      dozvoljeneAkcije: null == dozvoljeneAkcije
           ? _value._dozvoljeneAkcije
           : dozvoljeneAkcije // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      email: email == freezed
+      email: null == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String,
-      email_verified: email_verified == freezed
+      email_verified: null == email_verified
           ? _value.email_verified
           : email_verified // ignore: cast_nullable_to_non_nullable
               as bool,
-      frontendModul: frontendModul == freezed
+      frontendModul: null == frontendModul
           ? _value.frontendModul
           : frontendModul // ignore: cast_nullable_to_non_nullable
               as String,
-      frontendModulNaslov: frontendModulNaslov == freezed
+      frontendModulNaslov: null == frontendModulNaslov
           ? _value.frontendModulNaslov
           : frontendModulNaslov // ignore: cast_nullable_to_non_nullable
               as String,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      preferred_username: preferred_username == freezed
+      preferred_username: null == preferred_username
           ? _value.preferred_username
           : preferred_username // ignore: cast_nullable_to_non_nullable
               as String,
-      punoIme: punoIme == freezed
+      punoIme: null == punoIme
           ? _value.punoIme
           : punoIme // ignore: cast_nullable_to_non_nullable
               as String,
-      role: role == freezed
+      role: null == role
           ? _value.role
           : role // ignore: cast_nullable_to_non_nullable
               as String,
-      sub: sub == freezed
+      sub: null == sub
           ? _value.sub
           : sub // ignore: cast_nullable_to_non_nullable
               as String,
-      ulogaId: ulogaId == freezed
+      ulogaId: null == ulogaId
           ? _value.ulogaId
           : ulogaId // ignore: cast_nullable_to_non_nullable
               as String,
@@ -263,6 +265,8 @@ class _$_UserInfoModel implements _UserInfoModel {
   final List<String> _dozvoljeneAkcije;
   @override
   List<String> get dozvoljeneAkcije {
+    if (_dozvoljeneAkcije is EqualUnmodifiableListView)
+      return _dozvoljeneAkcije;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_dozvoljeneAkcije);
   }
@@ -298,45 +302,46 @@ class _$_UserInfoModel implements _UserInfoModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_UserInfoModel &&
-            const DeepCollectionEquality()
-                .equals(other.dodatneInformacije, dodatneInformacije) &&
+            (identical(other.dodatneInformacije, dodatneInformacije) ||
+                other.dodatneInformacije == dodatneInformacije) &&
             const DeepCollectionEquality()
                 .equals(other._dozvoljeneAkcije, _dozvoljeneAkcije) &&
-            const DeepCollectionEquality().equals(other.email, email) &&
-            const DeepCollectionEquality()
-                .equals(other.email_verified, email_verified) &&
-            const DeepCollectionEquality()
-                .equals(other.frontendModul, frontendModul) &&
-            const DeepCollectionEquality()
-                .equals(other.frontendModulNaslov, frontendModulNaslov) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.preferred_username, preferred_username) &&
-            const DeepCollectionEquality().equals(other.punoIme, punoIme) &&
-            const DeepCollectionEquality().equals(other.role, role) &&
-            const DeepCollectionEquality().equals(other.sub, sub) &&
-            const DeepCollectionEquality().equals(other.ulogaId, ulogaId));
+            (identical(other.email, email) || other.email == email) &&
+            (identical(other.email_verified, email_verified) ||
+                other.email_verified == email_verified) &&
+            (identical(other.frontendModul, frontendModul) ||
+                other.frontendModul == frontendModul) &&
+            (identical(other.frontendModulNaslov, frontendModulNaslov) ||
+                other.frontendModulNaslov == frontendModulNaslov) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.preferred_username, preferred_username) ||
+                other.preferred_username == preferred_username) &&
+            (identical(other.punoIme, punoIme) || other.punoIme == punoIme) &&
+            (identical(other.role, role) || other.role == role) &&
+            (identical(other.sub, sub) || other.sub == sub) &&
+            (identical(other.ulogaId, ulogaId) || other.ulogaId == ulogaId));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(dodatneInformacije),
+      dodatneInformacije,
       const DeepCollectionEquality().hash(_dozvoljeneAkcije),
-      const DeepCollectionEquality().hash(email),
-      const DeepCollectionEquality().hash(email_verified),
-      const DeepCollectionEquality().hash(frontendModul),
-      const DeepCollectionEquality().hash(frontendModulNaslov),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(preferred_username),
-      const DeepCollectionEquality().hash(punoIme),
-      const DeepCollectionEquality().hash(role),
-      const DeepCollectionEquality().hash(sub),
-      const DeepCollectionEquality().hash(ulogaId));
+      email,
+      email_verified,
+      frontendModul,
+      frontendModulNaslov,
+      name,
+      preferred_username,
+      punoIme,
+      role,
+      sub,
+      ulogaId);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_UserInfoModelCopyWith<_$_UserInfoModel> get copyWith =>
       __$$_UserInfoModelCopyWithImpl<_$_UserInfoModel>(this, _$identity);
 

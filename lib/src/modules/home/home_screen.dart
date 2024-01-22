@@ -65,7 +65,7 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
               label: "Predmeti"),
           BottomNavigationBarItem(
               icon: Icon(
-                Icons.person_2_sharp,
+                Icons.person_sharp,
                 color: Colors.white,
               ),
               label: "Profil"),

@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'postavke_model.dart';
 
@@ -51,7 +51,8 @@ mixin _$PostavkeModel {
 abstract class $PostavkeModelCopyWith<$Res> {
   factory $PostavkeModelCopyWith(
           PostavkeModel value, $Res Function(PostavkeModel) then) =
-      _$PostavkeModelCopyWithImpl<$Res>;
+      _$PostavkeModelCopyWithImpl<$Res, PostavkeModel>;
+  @useResult
   $Res call(
       {String? naslovSistema,
       int trajanjeSesije,
@@ -75,22 +76,24 @@ abstract class $PostavkeModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PostavkeModelCopyWithImpl<$Res>
+class _$PostavkeModelCopyWithImpl<$Res, $Val extends PostavkeModel>
     implements $PostavkeModelCopyWith<$Res> {
   _$PostavkeModelCopyWithImpl(this._value, this._then);
 
-  final PostavkeModel _value;
   // ignore: unused_field
-  final $Res Function(PostavkeModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? naslovSistema = freezed,
-    Object? trajanjeSesije = freezed,
+    Object? trajanjeSesije = null,
     Object? urlKarte = freezed,
     Object? autorskaPravaKarte = freezed,
-    Object? omogucenoKreiranjeRazredaUProsleGodine = freezed,
-    Object? retroaktivniUnosOcjenaSkola = freezed,
+    Object? omogucenoKreiranjeRazredaUProsleGodine = null,
+    Object? retroaktivniUnosOcjenaSkola = null,
     Object? emailZaKarte = freezed,
     Object? sifraEmailaZaKarte = freezed,
     Object? emailZaNotifikacije = freezed,
@@ -101,89 +104,89 @@ class _$PostavkeModelCopyWithImpl<$Res>
     Object? defaultnaValuta = freezed,
     Object? defaultCurrencyId = freezed,
     Object? defaultVatId = freezed,
-    Object? saljiFaktureWebService = freezed,
-    Object? saljiFaktureEmail = freezed,
+    Object? saljiFaktureWebService = null,
+    Object? saljiFaktureEmail = null,
     Object? defaultStateId = freezed,
   }) {
     return _then(_value.copyWith(
-      naslovSistema: naslovSistema == freezed
+      naslovSistema: freezed == naslovSistema
           ? _value.naslovSistema
           : naslovSistema // ignore: cast_nullable_to_non_nullable
               as String?,
-      trajanjeSesije: trajanjeSesije == freezed
+      trajanjeSesije: null == trajanjeSesije
           ? _value.trajanjeSesije
           : trajanjeSesije // ignore: cast_nullable_to_non_nullable
               as int,
-      urlKarte: urlKarte == freezed
+      urlKarte: freezed == urlKarte
           ? _value.urlKarte
           : urlKarte // ignore: cast_nullable_to_non_nullable
               as String?,
-      autorskaPravaKarte: autorskaPravaKarte == freezed
+      autorskaPravaKarte: freezed == autorskaPravaKarte
           ? _value.autorskaPravaKarte
           : autorskaPravaKarte // ignore: cast_nullable_to_non_nullable
               as String?,
-      omogucenoKreiranjeRazredaUProsleGodine:
-          omogucenoKreiranjeRazredaUProsleGodine == freezed
-              ? _value.omogucenoKreiranjeRazredaUProsleGodine
-              : omogucenoKreiranjeRazredaUProsleGodine // ignore: cast_nullable_to_non_nullable
-                  as bool,
-      retroaktivniUnosOcjenaSkola: retroaktivniUnosOcjenaSkola == freezed
+      omogucenoKreiranjeRazredaUProsleGodine: null ==
+              omogucenoKreiranjeRazredaUProsleGodine
+          ? _value.omogucenoKreiranjeRazredaUProsleGodine
+          : omogucenoKreiranjeRazredaUProsleGodine // ignore: cast_nullable_to_non_nullable
+              as bool,
+      retroaktivniUnosOcjenaSkola: null == retroaktivniUnosOcjenaSkola
           ? _value.retroaktivniUnosOcjenaSkola
           : retroaktivniUnosOcjenaSkola // ignore: cast_nullable_to_non_nullable
               as bool,
-      emailZaKarte: emailZaKarte == freezed
+      emailZaKarte: freezed == emailZaKarte
           ? _value.emailZaKarte
           : emailZaKarte // ignore: cast_nullable_to_non_nullable
               as String?,
-      sifraEmailaZaKarte: sifraEmailaZaKarte == freezed
+      sifraEmailaZaKarte: freezed == sifraEmailaZaKarte
           ? _value.sifraEmailaZaKarte
           : sifraEmailaZaKarte // ignore: cast_nullable_to_non_nullable
               as String?,
-      emailZaNotifikacije: emailZaNotifikacije == freezed
+      emailZaNotifikacije: freezed == emailZaNotifikacije
           ? _value.emailZaNotifikacije
           : emailZaNotifikacije // ignore: cast_nullable_to_non_nullable
               as String?,
-      sifraEmailaZaNotifikacije: sifraEmailaZaNotifikacije == freezed
+      sifraEmailaZaNotifikacije: freezed == sifraEmailaZaNotifikacije
           ? _value.sifraEmailaZaNotifikacije
           : sifraEmailaZaNotifikacije // ignore: cast_nullable_to_non_nullable
               as String?,
-      brojPokusaja: brojPokusaja == freezed
+      brojPokusaja: freezed == brojPokusaja
           ? _value.brojPokusaja
           : brojPokusaja // ignore: cast_nullable_to_non_nullable
               as int?,
-      brojDana: brojDana == freezed
+      brojDana: freezed == brojDana
           ? _value.brojDana
           : brojDana // ignore: cast_nullable_to_non_nullable
               as int?,
-      brojSatiMinuta: brojSatiMinuta == freezed
+      brojSatiMinuta: freezed == brojSatiMinuta
           ? _value.brojSatiMinuta
           : brojSatiMinuta // ignore: cast_nullable_to_non_nullable
               as String?,
-      defaultnaValuta: defaultnaValuta == freezed
+      defaultnaValuta: freezed == defaultnaValuta
           ? _value.defaultnaValuta
           : defaultnaValuta // ignore: cast_nullable_to_non_nullable
               as String?,
-      defaultCurrencyId: defaultCurrencyId == freezed
+      defaultCurrencyId: freezed == defaultCurrencyId
           ? _value.defaultCurrencyId
           : defaultCurrencyId // ignore: cast_nullable_to_non_nullable
               as int?,
-      defaultVatId: defaultVatId == freezed
+      defaultVatId: freezed == defaultVatId
           ? _value.defaultVatId
           : defaultVatId // ignore: cast_nullable_to_non_nullable
               as int?,
-      saljiFaktureWebService: saljiFaktureWebService == freezed
+      saljiFaktureWebService: null == saljiFaktureWebService
           ? _value.saljiFaktureWebService
           : saljiFaktureWebService // ignore: cast_nullable_to_non_nullable
               as bool,
-      saljiFaktureEmail: saljiFaktureEmail == freezed
+      saljiFaktureEmail: null == saljiFaktureEmail
           ? _value.saljiFaktureEmail
           : saljiFaktureEmail // ignore: cast_nullable_to_non_nullable
               as bool,
-      defaultStateId: defaultStateId == freezed
+      defaultStateId: freezed == defaultStateId
           ? _value.defaultStateId
           : defaultStateId // ignore: cast_nullable_to_non_nullable
               as int?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -194,6 +197,7 @@ abstract class _$$_PostavkeModelCopyWith<$Res>
           _$_PostavkeModel value, $Res Function(_$_PostavkeModel) then) =
       __$$_PostavkeModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? naslovSistema,
       int trajanjeSesije,
@@ -218,23 +222,21 @@ abstract class _$$_PostavkeModelCopyWith<$Res>
 
 /// @nodoc
 class __$$_PostavkeModelCopyWithImpl<$Res>
-    extends _$PostavkeModelCopyWithImpl<$Res>
+    extends _$PostavkeModelCopyWithImpl<$Res, _$_PostavkeModel>
     implements _$$_PostavkeModelCopyWith<$Res> {
   __$$_PostavkeModelCopyWithImpl(
       _$_PostavkeModel _value, $Res Function(_$_PostavkeModel) _then)
-      : super(_value, (v) => _then(v as _$_PostavkeModel));
+      : super(_value, _then);
 
-  @override
-  _$_PostavkeModel get _value => super._value as _$_PostavkeModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? naslovSistema = freezed,
-    Object? trajanjeSesije = freezed,
+    Object? trajanjeSesije = null,
     Object? urlKarte = freezed,
     Object? autorskaPravaKarte = freezed,
-    Object? omogucenoKreiranjeRazredaUProsleGodine = freezed,
-    Object? retroaktivniUnosOcjenaSkola = freezed,
+    Object? omogucenoKreiranjeRazredaUProsleGodine = null,
+    Object? retroaktivniUnosOcjenaSkola = null,
     Object? emailZaKarte = freezed,
     Object? sifraEmailaZaKarte = freezed,
     Object? emailZaNotifikacije = freezed,
@@ -245,85 +247,85 @@ class __$$_PostavkeModelCopyWithImpl<$Res>
     Object? defaultnaValuta = freezed,
     Object? defaultCurrencyId = freezed,
     Object? defaultVatId = freezed,
-    Object? saljiFaktureWebService = freezed,
-    Object? saljiFaktureEmail = freezed,
+    Object? saljiFaktureWebService = null,
+    Object? saljiFaktureEmail = null,
     Object? defaultStateId = freezed,
   }) {
     return _then(_$_PostavkeModel(
-      naslovSistema: naslovSistema == freezed
+      naslovSistema: freezed == naslovSistema
           ? _value.naslovSistema
           : naslovSistema // ignore: cast_nullable_to_non_nullable
               as String?,
-      trajanjeSesije: trajanjeSesije == freezed
+      trajanjeSesije: null == trajanjeSesije
           ? _value.trajanjeSesije
           : trajanjeSesije // ignore: cast_nullable_to_non_nullable
               as int,
-      urlKarte: urlKarte == freezed
+      urlKarte: freezed == urlKarte
           ? _value.urlKarte
           : urlKarte // ignore: cast_nullable_to_non_nullable
               as String?,
-      autorskaPravaKarte: autorskaPravaKarte == freezed
+      autorskaPravaKarte: freezed == autorskaPravaKarte
           ? _value.autorskaPravaKarte
           : autorskaPravaKarte // ignore: cast_nullable_to_non_nullable
               as String?,
-      omogucenoKreiranjeRazredaUProsleGodine:
-          omogucenoKreiranjeRazredaUProsleGodine == freezed
-              ? _value.omogucenoKreiranjeRazredaUProsleGodine
-              : omogucenoKreiranjeRazredaUProsleGodine // ignore: cast_nullable_to_non_nullable
-                  as bool,
-      retroaktivniUnosOcjenaSkola: retroaktivniUnosOcjenaSkola == freezed
+      omogucenoKreiranjeRazredaUProsleGodine: null ==
+              omogucenoKreiranjeRazredaUProsleGodine
+          ? _value.omogucenoKreiranjeRazredaUProsleGodine
+          : omogucenoKreiranjeRazredaUProsleGodine // ignore: cast_nullable_to_non_nullable
+              as bool,
+      retroaktivniUnosOcjenaSkola: null == retroaktivniUnosOcjenaSkola
           ? _value.retroaktivniUnosOcjenaSkola
           : retroaktivniUnosOcjenaSkola // ignore: cast_nullable_to_non_nullable
               as bool,
-      emailZaKarte: emailZaKarte == freezed
+      emailZaKarte: freezed == emailZaKarte
           ? _value.emailZaKarte
           : emailZaKarte // ignore: cast_nullable_to_non_nullable
               as String?,
-      sifraEmailaZaKarte: sifraEmailaZaKarte == freezed
+      sifraEmailaZaKarte: freezed == sifraEmailaZaKarte
           ? _value.sifraEmailaZaKarte
           : sifraEmailaZaKarte // ignore: cast_nullable_to_non_nullable
               as String?,
-      emailZaNotifikacije: emailZaNotifikacije == freezed
+      emailZaNotifikacije: freezed == emailZaNotifikacije
           ? _value.emailZaNotifikacije
           : emailZaNotifikacije // ignore: cast_nullable_to_non_nullable
               as String?,
-      sifraEmailaZaNotifikacije: sifraEmailaZaNotifikacije == freezed
+      sifraEmailaZaNotifikacije: freezed == sifraEmailaZaNotifikacije
           ? _value.sifraEmailaZaNotifikacije
           : sifraEmailaZaNotifikacije // ignore: cast_nullable_to_non_nullable
               as String?,
-      brojPokusaja: brojPokusaja == freezed
+      brojPokusaja: freezed == brojPokusaja
           ? _value.brojPokusaja
           : brojPokusaja // ignore: cast_nullable_to_non_nullable
               as int?,
-      brojDana: brojDana == freezed
+      brojDana: freezed == brojDana
           ? _value.brojDana
           : brojDana // ignore: cast_nullable_to_non_nullable
               as int?,
-      brojSatiMinuta: brojSatiMinuta == freezed
+      brojSatiMinuta: freezed == brojSatiMinuta
           ? _value.brojSatiMinuta
           : brojSatiMinuta // ignore: cast_nullable_to_non_nullable
               as String?,
-      defaultnaValuta: defaultnaValuta == freezed
+      defaultnaValuta: freezed == defaultnaValuta
           ? _value.defaultnaValuta
           : defaultnaValuta // ignore: cast_nullable_to_non_nullable
               as String?,
-      defaultCurrencyId: defaultCurrencyId == freezed
+      defaultCurrencyId: freezed == defaultCurrencyId
           ? _value.defaultCurrencyId
           : defaultCurrencyId // ignore: cast_nullable_to_non_nullable
               as int?,
-      defaultVatId: defaultVatId == freezed
+      defaultVatId: freezed == defaultVatId
           ? _value.defaultVatId
           : defaultVatId // ignore: cast_nullable_to_non_nullable
               as int?,
-      saljiFaktureWebService: saljiFaktureWebService == freezed
+      saljiFaktureWebService: null == saljiFaktureWebService
           ? _value.saljiFaktureWebService
           : saljiFaktureWebService // ignore: cast_nullable_to_non_nullable
               as bool,
-      saljiFaktureEmail: saljiFaktureEmail == freezed
+      saljiFaktureEmail: null == saljiFaktureEmail
           ? _value.saljiFaktureEmail
           : saljiFaktureEmail // ignore: cast_nullable_to_non_nullable
               as bool,
-      defaultStateId: defaultStateId == freezed
+      defaultStateId: freezed == defaultStateId
           ? _value.defaultStateId
           : defaultStateId // ignore: cast_nullable_to_non_nullable
               as int?,
@@ -407,74 +409,78 @@ class _$_PostavkeModel implements _PostavkeModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_PostavkeModel &&
-            const DeepCollectionEquality()
-                .equals(other.naslovSistema, naslovSistema) &&
-            const DeepCollectionEquality()
-                .equals(other.trajanjeSesije, trajanjeSesije) &&
-            const DeepCollectionEquality().equals(other.urlKarte, urlKarte) &&
-            const DeepCollectionEquality()
-                .equals(other.autorskaPravaKarte, autorskaPravaKarte) &&
-            const DeepCollectionEquality().equals(
-                other.omogucenoKreiranjeRazredaUProsleGodine,
-                omogucenoKreiranjeRazredaUProsleGodine) &&
-            const DeepCollectionEquality().equals(
-                other.retroaktivniUnosOcjenaSkola,
-                retroaktivniUnosOcjenaSkola) &&
-            const DeepCollectionEquality()
-                .equals(other.emailZaKarte, emailZaKarte) &&
-            const DeepCollectionEquality()
-                .equals(other.sifraEmailaZaKarte, sifraEmailaZaKarte) &&
-            const DeepCollectionEquality()
-                .equals(other.emailZaNotifikacije, emailZaNotifikacije) &&
-            const DeepCollectionEquality().equals(
-                other.sifraEmailaZaNotifikacije, sifraEmailaZaNotifikacije) &&
-            const DeepCollectionEquality()
-                .equals(other.brojPokusaja, brojPokusaja) &&
-            const DeepCollectionEquality().equals(other.brojDana, brojDana) &&
-            const DeepCollectionEquality()
-                .equals(other.brojSatiMinuta, brojSatiMinuta) &&
-            const DeepCollectionEquality()
-                .equals(other.defaultnaValuta, defaultnaValuta) &&
-            const DeepCollectionEquality()
-                .equals(other.defaultCurrencyId, defaultCurrencyId) &&
-            const DeepCollectionEquality()
-                .equals(other.defaultVatId, defaultVatId) &&
-            const DeepCollectionEquality()
-                .equals(other.saljiFaktureWebService, saljiFaktureWebService) &&
-            const DeepCollectionEquality()
-                .equals(other.saljiFaktureEmail, saljiFaktureEmail) &&
-            const DeepCollectionEquality()
-                .equals(other.defaultStateId, defaultStateId));
+            (identical(other.naslovSistema, naslovSistema) ||
+                other.naslovSistema == naslovSistema) &&
+            (identical(other.trajanjeSesije, trajanjeSesije) ||
+                other.trajanjeSesije == trajanjeSesije) &&
+            (identical(other.urlKarte, urlKarte) ||
+                other.urlKarte == urlKarte) &&
+            (identical(other.autorskaPravaKarte, autorskaPravaKarte) ||
+                other.autorskaPravaKarte == autorskaPravaKarte) &&
+            (identical(other.omogucenoKreiranjeRazredaUProsleGodine,
+                    omogucenoKreiranjeRazredaUProsleGodine) ||
+                other.omogucenoKreiranjeRazredaUProsleGodine ==
+                    omogucenoKreiranjeRazredaUProsleGodine) &&
+            (identical(other.retroaktivniUnosOcjenaSkola,
+                    retroaktivniUnosOcjenaSkola) ||
+                other.retroaktivniUnosOcjenaSkola ==
+                    retroaktivniUnosOcjenaSkola) &&
+            (identical(other.emailZaKarte, emailZaKarte) ||
+                other.emailZaKarte == emailZaKarte) &&
+            (identical(other.sifraEmailaZaKarte, sifraEmailaZaKarte) ||
+                other.sifraEmailaZaKarte == sifraEmailaZaKarte) &&
+            (identical(other.emailZaNotifikacije, emailZaNotifikacije) ||
+                other.emailZaNotifikacije == emailZaNotifikacije) &&
+            (identical(other.sifraEmailaZaNotifikacije, sifraEmailaZaNotifikacije) ||
+                other.sifraEmailaZaNotifikacije == sifraEmailaZaNotifikacije) &&
+            (identical(other.brojPokusaja, brojPokusaja) ||
+                other.brojPokusaja == brojPokusaja) &&
+            (identical(other.brojDana, brojDana) ||
+                other.brojDana == brojDana) &&
+            (identical(other.brojSatiMinuta, brojSatiMinuta) ||
+                other.brojSatiMinuta == brojSatiMinuta) &&
+            (identical(other.defaultnaValuta, defaultnaValuta) ||
+                other.defaultnaValuta == defaultnaValuta) &&
+            (identical(other.defaultCurrencyId, defaultCurrencyId) ||
+                other.defaultCurrencyId == defaultCurrencyId) &&
+            (identical(other.defaultVatId, defaultVatId) ||
+                other.defaultVatId == defaultVatId) &&
+            (identical(other.saljiFaktureWebService, saljiFaktureWebService) ||
+                other.saljiFaktureWebService == saljiFaktureWebService) &&
+            (identical(other.saljiFaktureEmail, saljiFaktureEmail) ||
+                other.saljiFaktureEmail == saljiFaktureEmail) &&
+            (identical(other.defaultStateId, defaultStateId) ||
+                other.defaultStateId == defaultStateId));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        const DeepCollectionEquality().hash(naslovSistema),
-        const DeepCollectionEquality().hash(trajanjeSesije),
-        const DeepCollectionEquality().hash(urlKarte),
-        const DeepCollectionEquality().hash(autorskaPravaKarte),
-        const DeepCollectionEquality()
-            .hash(omogucenoKreiranjeRazredaUProsleGodine),
-        const DeepCollectionEquality().hash(retroaktivniUnosOcjenaSkola),
-        const DeepCollectionEquality().hash(emailZaKarte),
-        const DeepCollectionEquality().hash(sifraEmailaZaKarte),
-        const DeepCollectionEquality().hash(emailZaNotifikacije),
-        const DeepCollectionEquality().hash(sifraEmailaZaNotifikacije),
-        const DeepCollectionEquality().hash(brojPokusaja),
-        const DeepCollectionEquality().hash(brojDana),
-        const DeepCollectionEquality().hash(brojSatiMinuta),
-        const DeepCollectionEquality().hash(defaultnaValuta),
-        const DeepCollectionEquality().hash(defaultCurrencyId),
-        const DeepCollectionEquality().hash(defaultVatId),
-        const DeepCollectionEquality().hash(saljiFaktureWebService),
-        const DeepCollectionEquality().hash(saljiFaktureEmail),
-        const DeepCollectionEquality().hash(defaultStateId)
+        naslovSistema,
+        trajanjeSesije,
+        urlKarte,
+        autorskaPravaKarte,
+        omogucenoKreiranjeRazredaUProsleGodine,
+        retroaktivniUnosOcjenaSkola,
+        emailZaKarte,
+        sifraEmailaZaKarte,
+        emailZaNotifikacije,
+        sifraEmailaZaNotifikacije,
+        brojPokusaja,
+        brojDana,
+        brojSatiMinuta,
+        defaultnaValuta,
+        defaultCurrencyId,
+        defaultVatId,
+        saljiFaktureWebService,
+        saljiFaktureEmail,
+        defaultStateId
       ]);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_PostavkeModelCopyWith<_$_PostavkeModel> get copyWith =>
       __$$_PostavkeModelCopyWithImpl<_$_PostavkeModel>(this, _$identity);
 

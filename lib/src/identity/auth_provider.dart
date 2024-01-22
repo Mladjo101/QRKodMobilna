@@ -51,7 +51,7 @@ class AuthNotifier extends StateNotifier<AuthState> {
 
       var model = AuthModel(
         userName: username,
-        token: token.access_token,
+        token: roles.token!,
         dozvoljeneAkcije: userInfo.dozvoljeneAkcije,
         email: userInfo.email,
         frontendModul: userInfo.frontendModul,
@@ -61,13 +61,13 @@ class AuthNotifier extends StateNotifier<AuthState> {
         ulogaId: userInfo.ulogaId,
       );
       var todaysDate = DateTime.now();
-      var dateOfExpiration =
-          todaysDate.add(Duration(seconds: token.expires_in));
+      // var dateOfExpiration =
+      //     todaysDate.add(Duration(seconds: roles.token.expires_in));
 
       singleton.get<SharedPreferencesHelper>().setIdentity(model);
-      singleton
-          .get<SharedPreferencesHelper>()
-          .setExpirationDate(dateOfExpiration);
+      // singleton
+      //     .get<SharedPreferencesHelper>()
+      //     .setExpirationDate(dateOfExpiration);
       state = state.copyWith(identity: model, isLoading: false);
       return true;
     } catch (e) {

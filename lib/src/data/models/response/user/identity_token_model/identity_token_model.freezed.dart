@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'identity_token_model.dart';
 
@@ -36,7 +36,8 @@ mixin _$IdentityTokenModel {
 abstract class $IdentityTokenModelCopyWith<$Res> {
   factory $IdentityTokenModelCopyWith(
           IdentityTokenModel value, $Res Function(IdentityTokenModel) then) =
-      _$IdentityTokenModelCopyWithImpl<$Res>;
+      _$IdentityTokenModelCopyWithImpl<$Res, IdentityTokenModel>;
+  @useResult
   $Res call(
       {String access_token,
       int expires_in,
@@ -46,44 +47,46 @@ abstract class $IdentityTokenModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$IdentityTokenModelCopyWithImpl<$Res>
+class _$IdentityTokenModelCopyWithImpl<$Res, $Val extends IdentityTokenModel>
     implements $IdentityTokenModelCopyWith<$Res> {
   _$IdentityTokenModelCopyWithImpl(this._value, this._then);
 
-  final IdentityTokenModel _value;
   // ignore: unused_field
-  final $Res Function(IdentityTokenModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? access_token = freezed,
-    Object? expires_in = freezed,
-    Object? refresh_token = freezed,
-    Object? scope = freezed,
-    Object? token_type = freezed,
+    Object? access_token = null,
+    Object? expires_in = null,
+    Object? refresh_token = null,
+    Object? scope = null,
+    Object? token_type = null,
   }) {
     return _then(_value.copyWith(
-      access_token: access_token == freezed
+      access_token: null == access_token
           ? _value.access_token
           : access_token // ignore: cast_nullable_to_non_nullable
               as String,
-      expires_in: expires_in == freezed
+      expires_in: null == expires_in
           ? _value.expires_in
           : expires_in // ignore: cast_nullable_to_non_nullable
               as int,
-      refresh_token: refresh_token == freezed
+      refresh_token: null == refresh_token
           ? _value.refresh_token
           : refresh_token // ignore: cast_nullable_to_non_nullable
               as String,
-      scope: scope == freezed
+      scope: null == scope
           ? _value.scope
           : scope // ignore: cast_nullable_to_non_nullable
               as String,
-      token_type: token_type == freezed
+      token_type: null == token_type
           ? _value.token_type
           : token_type // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -94,6 +97,7 @@ abstract class _$$_IdentityTokenModelCopyWith<$Res>
           $Res Function(_$_IdentityTokenModel) then) =
       __$$_IdentityTokenModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String access_token,
       int expires_in,
@@ -104,41 +108,39 @@ abstract class _$$_IdentityTokenModelCopyWith<$Res>
 
 /// @nodoc
 class __$$_IdentityTokenModelCopyWithImpl<$Res>
-    extends _$IdentityTokenModelCopyWithImpl<$Res>
+    extends _$IdentityTokenModelCopyWithImpl<$Res, _$_IdentityTokenModel>
     implements _$$_IdentityTokenModelCopyWith<$Res> {
   __$$_IdentityTokenModelCopyWithImpl(
       _$_IdentityTokenModel _value, $Res Function(_$_IdentityTokenModel) _then)
-      : super(_value, (v) => _then(v as _$_IdentityTokenModel));
+      : super(_value, _then);
 
-  @override
-  _$_IdentityTokenModel get _value => super._value as _$_IdentityTokenModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? access_token = freezed,
-    Object? expires_in = freezed,
-    Object? refresh_token = freezed,
-    Object? scope = freezed,
-    Object? token_type = freezed,
+    Object? access_token = null,
+    Object? expires_in = null,
+    Object? refresh_token = null,
+    Object? scope = null,
+    Object? token_type = null,
   }) {
     return _then(_$_IdentityTokenModel(
-      access_token: access_token == freezed
+      access_token: null == access_token
           ? _value.access_token
           : access_token // ignore: cast_nullable_to_non_nullable
               as String,
-      expires_in: expires_in == freezed
+      expires_in: null == expires_in
           ? _value.expires_in
           : expires_in // ignore: cast_nullable_to_non_nullable
               as int,
-      refresh_token: refresh_token == freezed
+      refresh_token: null == refresh_token
           ? _value.refresh_token
           : refresh_token // ignore: cast_nullable_to_non_nullable
               as String,
-      scope: scope == freezed
+      scope: null == scope
           ? _value.scope
           : scope // ignore: cast_nullable_to_non_nullable
               as String,
-      token_type: token_type == freezed
+      token_type: null == token_type
           ? _value.token_type
           : token_type // ignore: cast_nullable_to_non_nullable
               as String,
@@ -180,29 +182,25 @@ class _$_IdentityTokenModel implements _IdentityTokenModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_IdentityTokenModel &&
-            const DeepCollectionEquality()
-                .equals(other.access_token, access_token) &&
-            const DeepCollectionEquality()
-                .equals(other.expires_in, expires_in) &&
-            const DeepCollectionEquality()
-                .equals(other.refresh_token, refresh_token) &&
-            const DeepCollectionEquality().equals(other.scope, scope) &&
-            const DeepCollectionEquality()
-                .equals(other.token_type, token_type));
+            (identical(other.access_token, access_token) ||
+                other.access_token == access_token) &&
+            (identical(other.expires_in, expires_in) ||
+                other.expires_in == expires_in) &&
+            (identical(other.refresh_token, refresh_token) ||
+                other.refresh_token == refresh_token) &&
+            (identical(other.scope, scope) || other.scope == scope) &&
+            (identical(other.token_type, token_type) ||
+                other.token_type == token_type));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(access_token),
-      const DeepCollectionEquality().hash(expires_in),
-      const DeepCollectionEquality().hash(refresh_token),
-      const DeepCollectionEquality().hash(scope),
-      const DeepCollectionEquality().hash(token_type));
+      runtimeType, access_token, expires_in, refresh_token, scope, token_type);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_IdentityTokenModelCopyWith<_$_IdentityTokenModel> get copyWith =>
       __$$_IdentityTokenModelCopyWithImpl<_$_IdentityTokenModel>(
           this, _$identity);

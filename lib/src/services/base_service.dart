@@ -22,7 +22,7 @@ abstract class BaseService {
 class DioClient {
   final _dio = Dio(
     BaseOptions(
-      baseUrl: 'http://192.168.1.105:45456/',
+      baseUrl: 'http://127.0.0.1:8000/',
       connectTimeout: 5000,
       receiveTimeout: 3000,
       responseType: ResponseType.json,

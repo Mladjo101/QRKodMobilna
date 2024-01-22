@@ -10,7 +10,7 @@ import '../data/models/response/user/user_info_model/user_info_model.dart';
 class AuthService {
   late final Dio _dio = Dio(
     BaseOptions(
-      baseUrl: 'https://192.168.1.105:45455/',
+      baseUrl: 'http://127.0.0.1:8000/',
       connectTimeout: 5000,
       receiveTimeout: 3000,
       responseType: ResponseType.json,
@@ -32,11 +32,10 @@ class AuthService {
         'Username': username,
         'Password': password,
         'RememberLogin': true,
-        'ReturnUrl': "com.anet.assistance:/oauth2callback"
       });
 
       final response = await _dio.post(
-        '/Account/Login',
+        '/login',
         data: formData,
         queryParameters: {'button': 'login'},
         options: Options(
