@@ -25,6 +25,8 @@ mixin _$RoleListModel {
   String? get lastName => throw _privateConstructorUsedError;
   DateTime? get dateOfBirth => throw _privateConstructorUsedError;
   String? get token => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
+  String? get imePrezime => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -43,7 +45,9 @@ abstract class $RoleListModelCopyWith<$Res> {
       String? firstName,
       String? lastName,
       DateTime? dateOfBirth,
-      String? token});
+      String? token,
+      String? id,
+      String? imePrezime});
 }
 
 /// @nodoc
@@ -64,6 +68,8 @@ class _$RoleListModelCopyWithImpl<$Res, $Val extends RoleListModel>
     Object? lastName = freezed,
     Object? dateOfBirth = freezed,
     Object? token = freezed,
+    Object? id = freezed,
+    Object? imePrezime = freezed,
   }) {
     return _then(_value.copyWith(
       email: freezed == email
@@ -86,6 +92,14 @@ class _$RoleListModelCopyWithImpl<$Res, $Val extends RoleListModel>
           ? _value.token
           : token // ignore: cast_nullable_to_non_nullable
               as String?,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      imePrezime: freezed == imePrezime
+          ? _value.imePrezime
+          : imePrezime // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -103,7 +117,9 @@ abstract class _$$_RoleListModelCopyWith<$Res>
       String? firstName,
       String? lastName,
       DateTime? dateOfBirth,
-      String? token});
+      String? token,
+      String? id,
+      String? imePrezime});
 }
 
 /// @nodoc
@@ -122,6 +138,8 @@ class __$$_RoleListModelCopyWithImpl<$Res>
     Object? lastName = freezed,
     Object? dateOfBirth = freezed,
     Object? token = freezed,
+    Object? id = freezed,
+    Object? imePrezime = freezed,
   }) {
     return _then(_$_RoleListModel(
       email: freezed == email
@@ -144,6 +162,14 @@ class __$$_RoleListModelCopyWithImpl<$Res>
           ? _value.token
           : token // ignore: cast_nullable_to_non_nullable
               as String?,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      imePrezime: freezed == imePrezime
+          ? _value.imePrezime
+          : imePrezime // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -156,7 +182,9 @@ class _$_RoleListModel implements _RoleListModel {
       this.firstName,
       this.lastName,
       this.dateOfBirth,
-      this.token});
+      this.token,
+      this.id,
+      this.imePrezime});
 
   factory _$_RoleListModel.fromJson(Map<String, dynamic> json) =>
       _$$_RoleListModelFromJson(json);
@@ -171,10 +199,14 @@ class _$_RoleListModel implements _RoleListModel {
   final DateTime? dateOfBirth;
   @override
   final String? token;
+  @override
+  final String? id;
+  @override
+  final String? imePrezime;
 
   @override
   String toString() {
-    return 'RoleListModel(email: $email, firstName: $firstName, lastName: $lastName, dateOfBirth: $dateOfBirth, token: $token)';
+    return 'RoleListModel(email: $email, firstName: $firstName, lastName: $lastName, dateOfBirth: $dateOfBirth, token: $token, id: $id, imePrezime: $imePrezime)';
   }
 
   @override
@@ -189,13 +221,16 @@ class _$_RoleListModel implements _RoleListModel {
                 other.lastName == lastName) &&
             (identical(other.dateOfBirth, dateOfBirth) ||
                 other.dateOfBirth == dateOfBirth) &&
-            (identical(other.token, token) || other.token == token));
+            (identical(other.token, token) || other.token == token) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.imePrezime, imePrezime) ||
+                other.imePrezime == imePrezime));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, email, firstName, lastName, dateOfBirth, token);
+  int get hashCode => Object.hash(runtimeType, email, firstName, lastName,
+      dateOfBirth, token, id, imePrezime);
 
   @JsonKey(ignore: true)
   @override
@@ -217,7 +252,9 @@ abstract class _RoleListModel implements RoleListModel {
       final String? firstName,
       final String? lastName,
       final DateTime? dateOfBirth,
-      final String? token}) = _$_RoleListModel;
+      final String? token,
+      final String? id,
+      final String? imePrezime}) = _$_RoleListModel;
 
   factory _RoleListModel.fromJson(Map<String, dynamic> json) =
       _$_RoleListModel.fromJson;
@@ -232,6 +269,10 @@ abstract class _RoleListModel implements RoleListModel {
   DateTime? get dateOfBirth;
   @override
   String? get token;
+  @override
+  String? get id;
+  @override
+  String? get imePrezime;
   @override
   @JsonKey(ignore: true)
   _$$_RoleListModelCopyWith<_$_RoleListModel> get copyWith =>

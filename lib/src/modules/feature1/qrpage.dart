@@ -47,8 +47,7 @@ class QRPageState extends ConsumerState<QRPage> {
     //
     final snackBar = SnackBar(
       content: Text("Uspješno registrovanje prisustva"),
-      duration: Duration(seconds: 3), // Duration is optional
-      // You can add more properties like action for undo functionality, etc.
+      duration: Duration(seconds: 3),
     );
 
     ScaffoldMessenger.of(context).showSnackBar(snackBar);

@@ -64,6 +64,7 @@ class AuthNotifier extends StateNotifier<AuthState> {
       // var dateOfExpiration =
       //     todaysDate.add(Duration(seconds: roles.token.expires_in));
 
+      singleton.get<SharedPreferencesHelper>().setUserId(roles.id);
       singleton.get<SharedPreferencesHelper>().setIdentity(model);
       // singleton
       //     .get<SharedPreferencesHelper>()
