@@ -43,4 +43,14 @@ class SharedPreferencesHelper {
     if (state != null) return DateTime.parse(state);
     return null;
   }
+
+  Future<void> setUserId(String? id) async {
+    await prefs.setString('userId', id ?? "");
+  }
+
+  String? getUserId(String id) {
+    final String? state = prefs.getString('userId');
+    if (state != null) return state;
+    return null;
+  }
 }

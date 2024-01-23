@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:dio/dio.dart';
 import 'package:dio/adapter.dart';
 
+import '../data/models/response/predavanje/predavanje_in_db_model.dart';
 import '../helpers/shared_preferences.dart';
 import '../startup.dart';
 
@@ -34,6 +35,23 @@ class DioClient {
   }
 
   Dio get dio => _dio;
+  Future<PredavanjeInDBModel> prijavaPredavanje(username, password) async {
+    try {
+      final response = await _dio.post(
+        '/login',
+        data: "formData",
+        queryParameters: {'button': 'login'},
+        options: Options(
+          headers: {"No-Authentication": true},
+        ),
+      );
+      return PredavanjeInDBModel.fromJson(response.data);
+    } on DioError catch (err) {
+      throw err;
+    } catch (e) {
+      throw e.toString();
+    }
+  }
 }
 
 class DioInterceptor extends Interceptor {

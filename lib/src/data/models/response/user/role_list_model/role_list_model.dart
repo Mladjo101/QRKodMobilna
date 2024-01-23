@@ -9,10 +9,12 @@ part 'role_list_model.g.dart';
 class RoleListModel with _$RoleListModel {
   factory RoleListModel({
     String? email,
-    String?  firstName,
-    String?  lastName,
-    DateTime?  dateOfBirth,
-    String?  token,
+    String? firstName,
+    String? lastName,
+    DateTime? dateOfBirth,
+    String? token,
+    String? id,
+    String? imePrezime,
   }) = _RoleListModel;
 
   factory RoleListModel.fromJson(Map<String, dynamic> json) =>

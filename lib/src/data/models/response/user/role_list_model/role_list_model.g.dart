@@ -15,6 +15,8 @@ _$_RoleListModel _$$_RoleListModelFromJson(Map<String, dynamic> json) =>
           ? null
           : DateTime.parse(json['dateOfBirth'] as String),
       token: json['token'] as String?,
+      id: json['id'] as String?,
+      imePrezime: json['imePrezime'] as String?,
     );
 
 Map<String, dynamic> _$$_RoleListModelToJson(_$_RoleListModel instance) =>
@@ -24,4 +26,6 @@ Map<String, dynamic> _$$_RoleListModelToJson(_$_RoleListModel instance) =>
       'lastName': instance.lastName,
       'dateOfBirth': instance.dateOfBirth?.toIso8601String(),
       'token': instance.token,
+      'id': instance.id,
+      'imePrezime': instance.imePrezime,
     };
