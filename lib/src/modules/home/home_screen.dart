@@ -24,7 +24,7 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
     new Feature2(),
     new ProfilePageContent(),
   ];
-  final widgetTitle = ["Prisustva", "Historija", "Profil"];
+  final widgetTitle = ["Prisustva", "Predmeti", "Profil"];
   final navigatorKey = GlobalKey<NavigatorState>();
 
   void onItemTapped(int index) {
@@ -37,42 +37,48 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          widgetTitle.elementAt(selectedIndex),
-          style: const TextStyle(color: Colors.white),
+        title: Padding(
+          padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
+          child: Text(
+            widgetTitle.elementAt(selectedIndex),
+            style: const TextStyle(
+              color: Colors.white,
+              fontSize: 28,
+              fontFamily: 'openSans',
+            ),
+          ),
         ),
         backgroundColor: hexToColor("#182138"),
         elevation: 0,
       ),
-      body: Center(
+      body: Container(
+        color: Color.fromARGB(255, 24, 33, 56),
         child: widgetOptions.elementAt(selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: hexToColor("#182138"),
+        backgroundColor: Colors.white,
         key: navigatorKey,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-              icon: Icon(
-                Icons.done_all_sharp,
-                color: Colors.white,
-              ),
+              icon: Icon(Icons.done_all_sharp,
+                  color: Color.fromARGB(255, 24, 33, 56)),
               label: "Prisustva"),
           BottomNavigationBarItem(
               icon: Icon(
                 Icons.class_outlined,
-                color: Colors.white,
+                color: Color.fromARGB(255, 24, 33, 56),
               ),
               label: "Predmeti"),
           BottomNavigationBarItem(
               icon: Icon(
                 Icons.person_sharp,
-                color: Colors.white,
+                color: Color.fromARGB(255, 24, 33, 56),
               ),
               label: "Profil"),
         ],
         currentIndex: selectedIndex,
-        fixedColor: Colors.white,
-        unselectedItemColor: Colors.white,
+        fixedColor: Color.fromARGB(255, 24, 33, 56),
+        unselectedItemColor: Color.fromARGB(255, 24, 33, 56),
         onTap: onItemTapped,
         selectedLabelStyle: const TextStyle(color: Colors.red, fontSize: 20),
       ),

@@ -42,7 +42,7 @@ class SubjectCard extends StatelessWidget {
                 Text(
                   subjectName,
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 18,
                     fontWeight: FontWeight.bold,
                     color: hexToColor("#182138"), // Dark blue-gray for text
                   ),

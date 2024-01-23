@@ -20,7 +20,7 @@ class Feature2State extends ConsumerState<Feature2> {
 
     return Container(
         width: MediaQuery.of(context)!.size.width,
-        color: Colors.white,
+        color: Color.fromARGB(255, 24, 33, 56),
         child: Padding(
             padding: EdgeInsets.only(left: 0),
             child: Column(
@@ -28,26 +28,11 @@ class Feature2State extends ConsumerState<Feature2> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Padding(
-                  padding: EdgeInsets.only(top: 10),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Text(
-                        "Predmeti",
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: hexToColor("#182138")),
-                      ),
-                    ],
-                  ),
-                ),
-                Padding(
                   padding: EdgeInsets.only(right: 15, left: 15),
                   child: Container(
                     margin: EdgeInsets.only(top: 2),
                     width: MediaQuery.of(context)!.size.width,
-                    height: 2,
+                    height: 0,
                     decoration: BoxDecoration(
                       color: hexToColor("#182138"),
                       borderRadius: BorderRadius.circular(50),
