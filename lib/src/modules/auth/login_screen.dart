@@ -41,24 +41,28 @@ class LoginScreen extends ConsumerWidget {
       body: Form(
         key: validationKey,
         child: Center(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Container(
-                padding: const EdgeInsets.fromLTRB(20, 30, 20, 50),
-                child: Image.asset(
-                  'assets/myLogo.png', // Replace with your image asset or network image
-                  width: 185,
-                  height: 100.0, // Adjust the size as needed
-                  fit: BoxFit.fill,
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                  padding: const EdgeInsets.fromLTRB(20, 30, 20, 50),
+                  child: Image.asset(
+                    'assets/myLogo.png', // Replace with your image asset or network image
+                    width: 185,
+                    height: 100.0, // Adjust the size as needed
+                    fit: BoxFit.fill,
+                  ),
                 ),
-              ),
-              Container(
-                padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
-                child: TextFormField(
-                  style: TextStyle(color: Colors.black),
-                  decoration: InputDecoration(
+                Container(
+                  padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
+                  child: TextFormField(
+                    style: TextStyle(color: Colors.black),
+                    decoration: InputDecoration(
+                      hintText: AppLocalizations.of(context)!.username,
+                      hintStyle: TextStyle(
+                          color: const Color.fromARGB(255, 182, 182, 182)),
                       filled: true,
                       fillColor: Colors.white,
                       border: OutlineInputBorder(
@@ -70,27 +74,28 @@ class LoginScreen extends ConsumerWidget {
                       focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(60.0),
                           borderSide: BorderSide(color: Colors.white)),
-                      labelText: AppLocalizations.of(context)!.username,
-                      labelStyle: TextStyle(
-                          color: const Color.fromARGB(255, 182, 182, 182))),
-                  controller: usernameController,
-                  autocorrect: false,
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return AppLocalizations.of(context)!.required;
-                    }
-                    return null;
-                  },
+                    ),
+                    controller: usernameController,
+                    autocorrect: false,
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return AppLocalizations.of(context)!.required;
+                      }
+                      return null;
+                    },
+                  ),
                 ),
-              ),
-              Container(
-                padding: const EdgeInsets.fromLTRB(20, 30, 20, 0),
-                child: TextFormField(
-                  style: TextStyle(color: Colors.black),
-                  obscureText: true,
-                  decoration: InputDecoration(
+                Container(
+                  padding: const EdgeInsets.fromLTRB(20, 30, 20, 0),
+                  child: TextFormField(
+                    style: TextStyle(color: Colors.black),
+                    obscureText: true,
+                    decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.white,
+                      hintText: AppLocalizations.of(context)!.password,
+                      hintStyle: TextStyle(
+                          color: const Color.fromARGB(255, 182, 182, 182)),
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(60.0),
                           borderSide: BorderSide(color: Colors.white)),
@@ -100,37 +105,36 @@ class LoginScreen extends ConsumerWidget {
                       focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(60.0),
                           borderSide: BorderSide(color: Colors.white)),
-                      labelText: AppLocalizations.of(context)!.password,
-                      labelStyle: TextStyle(
-                          color: const Color.fromARGB(255, 182, 182, 182))),
-                  controller: passwordController,
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return AppLocalizations.of(context)!.required;
-                    }
-                    return null;
-                  },
-                ),
-              ),
-              SizedBox(height: 20),
-              Container(
-                padding: const EdgeInsets.all(20),
-                child: TextButton.icon(
-                  onPressed: () {
-                    loginMock();
-                  },
-                  label: Text(
-                    'Prijavi se',
-                    style: TextStyle(color: Colors.white, fontSize: 18),
-                  ),
-                  icon: Icon(
-                    Icons.login,
-                    color: Colors.white,
-                    size: 24,
+                    ),
+                    controller: passwordController,
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return AppLocalizations.of(context)!.required;
+                      }
+                      return null;
+                    },
                   ),
                 ),
-              ),
-            ],
+                SizedBox(height: 20),
+                Container(
+                  padding: const EdgeInsets.all(20),
+                  child: TextButton.icon(
+                    onPressed: () {
+                      loginMock();
+                    },
+                    label: Text(
+                      'Prijavi se',
+                      style: TextStyle(color: Colors.white, fontSize: 18),
+                    ),
+                    icon: Icon(
+                      Icons.login,
+                      color: Colors.white,
+                      size: 24,
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),

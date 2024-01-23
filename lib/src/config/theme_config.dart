@@ -125,7 +125,7 @@ class ThemeConfig {
       inputDecorationTheme: InputDecorationTheme(
         errorStyle: TextStyle(color: error),
         labelStyle: TextStyle(
-          fontFamily: '',
+          fontFamily: 'Roboto',
           fontWeight: FontWeight.w600,
           fontSize: 16.0,
           color: primaryText.withOpacity(0.5),
@@ -136,7 +136,7 @@ class ThemeConfig {
           fontWeight: FontWeight.w300,
         ),
       ),
-      fontFamily: '',
+      fontFamily: 'Roboto',
       textTheme: TextTheme(
         headline1: baseTextTheme.headline1?.copyWith(
           color: primaryText,
