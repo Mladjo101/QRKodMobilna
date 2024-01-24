@@ -26,6 +26,58 @@ class Feature1State extends ConsumerState<Feature1> {
     navigator.pushNamedAndRemoveUntil("/auth", (route) => false);
   }
 
+  List<Map<String, String>> recentAttendance = [
+    {
+      "day": "24",
+      "month": "NOV",
+      "className": "Razvoj Softvera",
+      "time": "17:24PM"
+    },
+    {
+      "day": "24",
+      "month": "NOV",
+      "className": "Razvoj Softvera",
+      "time": "17:24PM"
+    },
+    {
+      "day": "24",
+      "month": "NOV",
+      "className": "Razvoj Softvera",
+      "time": "17:24PM"
+    },
+    {
+      "day": "24",
+      "month": "NOV",
+      "className": "Razvoj Softvera",
+      "time": "17:24PM"
+    },
+    {
+      "day": "24",
+      "month": "NOV",
+      "className": "Razvoj Softvera",
+      "time": "17:24PM"
+    },
+    {
+      "day": "24",
+      "month": "NOV",
+      "className": "Razvoj Softvera",
+      "time": "17:24PM"
+    },
+    {
+      "day": "24",
+      "month": "NOV",
+      "className": "Razvoj Softvera",
+      "time": "17:24PM"
+    },
+    {
+      "day": "24",
+      "month": "NOV",
+      "className": "Razvoj Softvera",
+      "time": "17:24PM"
+    }
+    // Add more entries as needed
+  ];
+
   @override
   Widget build(BuildContext context) {
     void _onQRViewCreated(QRViewController controller) {
@@ -39,100 +91,112 @@ class Feature1State extends ConsumerState<Feature1> {
 
     return Container(
         color: Color.fromARGB(255, 24, 33, 56),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-                padding: EdgeInsets.only(left: 15, top: 20),
-                child: Text(
-                  'Dobrodošli',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-                )),
-            SizedBox(height: 30), // Adds space between the text and the button
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                TextButton(
-                  onPressed: () {
-                    // Action to perform when the button is pressed
-                    Navigator.pushNamed(context, '/qr');
-                  },
-                  child: Container(
-                    padding: EdgeInsets.fromLTRB(15, 15, 15, 15),
-                    width: MediaQuery.of(context)!.size.width / 1.1,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        Text(
-                          'Registruj prisustvo',
-                          style: TextStyle(
-                              color: Color.fromARGB(255, 24, 33, 56),
-                              fontSize: 21),
-                        ),
-                        SizedBox(width: 8),
-                        Icon(
-                          Icons.photo_camera,
-                          color: Color.fromARGB(255, 24, 33, 56),
-                          size: 26,
-                        ),
-                      ],
-                    ),
-                  ),
-                )
-              ],
-            ),
-            SizedBox(height: 30),
-            Padding(
-              padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    "Nedavna prisustva",
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                  padding: EdgeInsets.only(left: 15, top: 20),
+                  child: Text(
+                    'Dobrodošli',
                     style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white),
-                  ),
-                  SizedBox(
-                    height: 4,
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(top: 2),
-                    height: 1,
-                    decoration: BoxDecoration(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(50),
                     ),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(height: 20),
-            Container(
-              padding: EdgeInsets.only(left: 15),
-              width: (MediaQuery.of(context).size.width / 100) * 95,
-              child: Column(
+                  )),
+              SizedBox(
+                  height: 30), // Adds space between the text and the button
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  AttendanceCard(
-                      day: "24",
-                      month: "NOV",
-                      className: "Razvoj Softvera",
-                      time: "17:24PM")
+                  TextButton(
+                    onPressed: () {
+                      // Action to perform when the button is pressed
+                      Navigator.pushNamed(context, '/qr');
+                    },
+                    child: Container(
+                      padding: EdgeInsets.fromLTRB(15, 15, 15, 15),
+                      width: MediaQuery.of(context)!.size.width / 1.1,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          Text(
+                            'Registruj prisustvo',
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 24, 33, 56),
+                                fontSize: 21),
+                          ),
+                          SizedBox(width: 8),
+                          Icon(
+                            Icons.photo_camera,
+                            color: Color.fromARGB(255, 24, 33, 56),
+                            size: 26,
+                          ),
+                        ],
+                      ),
+                    ),
+                  )
                 ],
               ),
-            )
-          ],
+              SizedBox(height: 30),
+              Padding(
+                padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      "Nedavna prisustva",
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
+                    ),
+                    SizedBox(
+                      height: 4,
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(top: 2),
+                      height: 1,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(50),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(height: 20),
+              Container(
+                padding: EdgeInsets.only(left: 15),
+                width: (MediaQuery.of(context).size.width / 100) * 95,
+                child: ListView.builder(
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  itemCount: recentAttendance.length,
+                  itemBuilder: (context, index) {
+                    return Column(
+                      children: [
+                        AttendanceCard(
+                          day: recentAttendance[index]["day"]!,
+                          month: recentAttendance[index]["month"]!,
+                          className: recentAttendance[index]["className"]!,
+                          time: recentAttendance[index]["time"]!,
+                        ),
+                        SizedBox(height: 20),
+                      ],
+                    );
+                  },
+                ),
+              ),
+            ],
+          ),
         ));
   }
 }
