@@ -62,17 +62,19 @@ class LoginScreen extends ConsumerWidget {
                     decoration: InputDecoration(
                       hintText: AppLocalizations.of(context)!.username,
                       hintStyle: TextStyle(
-                          color: const Color.fromARGB(255, 182, 182, 182)),
+                        color: const Color.fromARGB(255, 182, 182, 182),
+                      ),
                       filled: true,
                       fillColor: Colors.white,
+                      contentPadding: EdgeInsets.all(10.0),
                       border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(60.0),
+                          borderRadius: BorderRadius.circular(10.0),
                           borderSide: BorderSide(color: Colors.white)),
                       enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(60.0),
+                          borderRadius: BorderRadius.circular(10.0),
                           borderSide: BorderSide(color: Colors.white)),
                       focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(60.0),
+                          borderRadius: BorderRadius.circular(10.0),
                           borderSide: BorderSide(color: Colors.white)),
                     ),
                     controller: usernameController,
@@ -86,24 +88,25 @@ class LoginScreen extends ConsumerWidget {
                   ),
                 ),
                 Container(
-                  padding: const EdgeInsets.fromLTRB(20, 30, 20, 0),
+                  padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
                   child: TextFormField(
                     style: TextStyle(color: Colors.black),
                     obscureText: true,
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.white,
+                      contentPadding: EdgeInsets.all(10.0),
                       hintText: AppLocalizations.of(context)!.password,
                       hintStyle: TextStyle(
                           color: const Color.fromARGB(255, 182, 182, 182)),
                       border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(60.0),
+                          borderRadius: BorderRadius.circular(10.0),
                           borderSide: BorderSide(color: Colors.white)),
                       enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(60.0),
+                          borderRadius: BorderRadius.circular(10.0),
                           borderSide: BorderSide(color: Colors.white)),
                       focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(60.0),
+                          borderRadius: BorderRadius.circular(10.0),
                           borderSide: BorderSide(color: Colors.white)),
                     ),
                     controller: passwordController,
@@ -115,9 +118,14 @@ class LoginScreen extends ConsumerWidget {
                     },
                   ),
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: 30),
                 Container(
-                  padding: const EdgeInsets.all(20),
+                  width: MediaQuery.of(context)!.size.width / 1.13,
+                  decoration: BoxDecoration(
+                    color: hexToColor("#00426C"),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  //padding: const EdgeInsets.all(20),
                   child: TextButton.icon(
                     onPressed: () {
                       loginMock();

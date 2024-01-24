@@ -37,16 +37,33 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Padding(
-          padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
-          child: Text(
-            widgetTitle.elementAt(selectedIndex),
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 28,
-              fontFamily: 'openSans',
+        title: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
+              child: Text(
+                widgetTitle.elementAt(selectedIndex),
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 28,
+                  fontFamily: 'openSans',
+                ),
+              ),
             ),
-          ),
+            SizedBox(
+              height: 4,
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 2),
+              width: MediaQuery.of(context)!.size.width,
+              height: 1,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(50),
+              ),
+            ),
+          ],
         ),
         backgroundColor: hexToColor("#182138"),
         elevation: 0,

@@ -39,7 +39,7 @@ class Feature2State extends ConsumerState<Feature2> {
                     ),
                   ),
                 ),
-                SizedBox(height: 15),
+                SizedBox(height: 20),
                 SubjectCard(
                   subjectName: 'Razvoj Softvera',
                   totalClasses: 15,
@@ -48,7 +48,7 @@ class Feature2State extends ConsumerState<Feature2> {
                     print("Subject Card Tapped!");
                   },
                 ),
-                SizedBox(height: 15),
+                SizedBox(height: 20),
                 SubjectCard(
                   subjectName: 'Razvoj Mobilnih Aplikacija',
                   totalClasses: 10,
