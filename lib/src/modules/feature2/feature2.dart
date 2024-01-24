@@ -14,50 +14,143 @@ class Feature2 extends ConsumerStatefulWidget {
 }
 
 class Feature2State extends ConsumerState<Feature2> {
+  List<Map<String, dynamic>> subjectList = [
+    {
+      "subjectName": 'Razvoj Softvera',
+      "totalClasses": 15,
+      "attendedClasses": 13,
+    },
+    {
+      "subjectName": 'Razvoj Mobilnih Aplikacija',
+      "totalClasses": 10,
+      "attendedClasses": 1,
+    },
+    {
+      "subjectName": 'Razvoj Softvera',
+      "totalClasses": 15,
+      "attendedClasses": 13,
+    },
+    {
+      "subjectName": 'Razvoj Mobilnih Aplikacija',
+      "totalClasses": 10,
+      "attendedClasses": 1,
+    },
+    {
+      "subjectName": 'Razvoj Softvera',
+      "totalClasses": 15,
+      "attendedClasses": 13,
+    },
+    {
+      "subjectName": 'Razvoj Mobilnih Aplikacija',
+      "totalClasses": 10,
+      "attendedClasses": 1,
+    },
+    {
+      "subjectName": 'Razvoj Softvera',
+      "totalClasses": 15,
+      "attendedClasses": 13,
+    },
+    {
+      "subjectName": 'Razvoj Mobilnih Aplikacija',
+      "totalClasses": 10,
+      "attendedClasses": 1,
+    },
+    {
+      "subjectName": 'Razvoj Softvera',
+      "totalClasses": 15,
+      "attendedClasses": 13,
+    },
+    {
+      "subjectName": 'Razvoj Mobilnih Aplikacija',
+      "totalClasses": 10,
+      "attendedClasses": 1,
+    },
+    {
+      "subjectName": 'Razvoj Softvera',
+      "totalClasses": 15,
+      "attendedClasses": 13,
+    },
+    {
+      "subjectName": 'Razvoj Mobilnih Aplikacija',
+      "totalClasses": 10,
+      "attendedClasses": 1,
+    },
+    {
+      "subjectName": 'Razvoj Softvera',
+      "totalClasses": 15,
+      "attendedClasses": 13,
+    },
+    {
+      "subjectName": 'Razvoj Mobilnih Aplikacija',
+      "totalClasses": 10,
+      "attendedClasses": 1,
+    },
+    {
+      "subjectName": 'Razvoj Softvera',
+      "totalClasses": 15,
+      "attendedClasses": 13,
+    },
+    {
+      "subjectName": 'Razvoj Mobilnih Aplikacija',
+      "totalClasses": 10,
+      "attendedClasses": 1,
+    }
+    // Add more subjects as needed
+  ];
+
   @override
   Widget build(BuildContext context) {
     var identity = ref.watch(authProvider).identity;
 
-    return Container(
-        width: MediaQuery.of(context)!.size.width,
-        color: Color.fromARGB(255, 24, 33, 56),
-        child: Padding(
-            padding: EdgeInsets.only(left: 0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(right: 15, left: 15),
-                  child: Container(
-                    margin: EdgeInsets.only(top: 2),
-                    width: MediaQuery.of(context)!.size.width,
-                    height: 0,
-                    decoration: BoxDecoration(
-                      color: hexToColor("#182138"),
-                      borderRadius: BorderRadius.circular(50),
+    return SingleChildScrollView(
+      child: Container(
+          width: MediaQuery.of(context)!.size.width,
+          color: Color.fromARGB(255, 24, 33, 56),
+          child: Padding(
+              padding: EdgeInsets.only(left: 0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(right: 15, left: 15),
+                    child: Container(
+                      margin: EdgeInsets.only(top: 2),
+                      width: MediaQuery.of(context)!.size.width,
+                      height: 0,
+                      decoration: BoxDecoration(
+                        color: hexToColor("#182138"),
+                        borderRadius: BorderRadius.circular(50),
+                      ),
                     ),
                   ),
-                ),
-                SizedBox(height: 20),
-                SubjectCard(
-                  subjectName: 'Razvoj Softvera',
-                  totalClasses: 15,
-                  attendedClasses: 13,
-                  onTap: () {
-                    print("Subject Card Tapped!");
-                  },
-                ),
-                SizedBox(height: 20),
-                SubjectCard(
-                  subjectName: 'Razvoj Mobilnih Aplikacija',
-                  totalClasses: 10,
-                  attendedClasses: 1,
-                  onTap: () {
-                    print("Subject Card Tapped!");
-                  },
-                )
-              ],
-            )));
+                  SizedBox(height: 20),
+                  ListView.builder(
+                    shrinkWrap: true,
+                    physics: NeverScrollableScrollPhysics(),
+                    itemCount: subjectList
+                        .length, // Assuming subjectList is defined somewhere
+                    itemBuilder: (context, index) {
+                      return Column(
+                        children: [
+                          SubjectCard(
+                            subjectName:
+                                subjectList[index]["subjectName"] ?? '',
+                            totalClasses:
+                                subjectList[index]["totalClasses"] ?? 0,
+                            attendedClasses:
+                                subjectList[index]["attendedClasses"] ?? 0,
+                            onTap: () {
+                              print("Subject Card Tapped!");
+                            },
+                          ),
+                          SizedBox(height: 20),
+                        ],
+                      );
+                    },
+                  ),
+                ],
+              ))),
+    );
   }
 }
