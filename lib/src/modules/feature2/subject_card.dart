@@ -47,6 +47,15 @@ class SubjectCard extends StatelessWidget {
                     color: hexToColor("#182138"), // Dark blue-gray for text
                   ),
                 ),
+                Container(
+                  margin: EdgeInsets.only(top: 2),
+                  width: MediaQuery.of(context)!.size.width,
+                  height: 1,
+                  decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 24, 33, 56),
+                    borderRadius: BorderRadius.circular(50),
+                  ),
+                ),
                 SizedBox(height: 8),
                 Text(
                   'Realizovanih časova: $totalClasses',
@@ -57,12 +66,45 @@ class SubjectCard extends StatelessWidget {
                 ),
                 SizedBox(height: 4),
                 Text(
-                  'Ukupno prisustvo: ${attendancePercentage.toStringAsFixed(1)}%',
+                  'Ukupno prisustvo:' /*${attendancePercentage.toStringAsFixed(1)}%'*/,
                   style: TextStyle(
                     fontSize: 16,
-                    color:
-                        attendancePercentage >= 75 ? Colors.green : Colors.red,
+                    color: hexToColor("#00426C"),
                   ),
+                ),
+                SizedBox(height: 8),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(8.0),
+                  child: LinearProgressIndicator(
+                    backgroundColor: Colors.grey[300], // Set background color
+                    valueColor: AlwaysStoppedAnimation<Color>(
+                        attendancePercentage >= 75
+                            ? Colors.green
+                            : Colors.red), // Set progress color
+                    value: attendancePercentage /
+                        100, // Set the current progress (0.0 to 1.0)
+                  ),
+                ),
+                SizedBox(height: 4),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      '12/15',
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: hexToColor("#00426C"),
+                      ),
+                    ),
+                    SizedBox(width: 8),
+                    Text(
+                      '${attendancePercentage.toStringAsFixed(1) + '%'}',
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: hexToColor("#00426C"),
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
