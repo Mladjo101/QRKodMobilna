@@ -44,21 +44,21 @@ class AuthNotifier extends StateNotifier<AuthState> {
   Future<bool> login(username, password) async {
     state = state.copyWith(isLoading: true);
     try {
-      var roles = await AuthService().login(username, password);
-      var token = await AuthService().getToken(username, password);
-      var userInfo =
-          await AuthService().getUserInfo("Bearer ${token.access_token}");
+      var roles = await DioClient().login(username, password);
+      //var token = await DioClient().getToken(username, password);
+      //var userInfo =  await DioClient().getUserInfo("Bearer ${token.access_token}");
 
       var model = AuthModel(
         userName: username,
         token: roles.token!,
-        dozvoljeneAkcije: userInfo.dozvoljeneAkcije,
-        email: userInfo.email,
-        frontendModul: userInfo.frontendModul,
-        frontendModulNaslov: userInfo.frontendModulNaslov,
-        punoIme: userInfo.punoIme,
-        role: userInfo.role,
-        ulogaId: userInfo.ulogaId,
+        //dozvoljeneAkcije: userInfo.dozvoljeneAkcije,
+        email: roles.email?? '',
+        //frontendModul: userInfo.frontendModul,
+        //frontendModulNaslov: userInfo.frontendModulNaslov,
+        punoIme: roles.imePrezime ?? '',
+        id: roles.id ?? '',
+        //role: roles.ulo,
+        //ulogaId: userInfo.ulogaId,
       );
       var todaysDate = DateTime.now();
       // var dateOfExpiration =

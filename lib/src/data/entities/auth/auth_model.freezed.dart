@@ -20,15 +20,16 @@ AuthModel _$AuthModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$AuthModel {
-  String get userName => throw _privateConstructorUsedError;
-  List<String> get dozvoljeneAkcije => throw _privateConstructorUsedError;
-  String get email => throw _privateConstructorUsedError;
-  String get frontendModul => throw _privateConstructorUsedError;
-  String get frontendModulNaslov => throw _privateConstructorUsedError;
-  String get punoIme => throw _privateConstructorUsedError;
-  String get role => throw _privateConstructorUsedError;
-  String get ulogaId => throw _privateConstructorUsedError;
-  String get token => throw _privateConstructorUsedError;
+  String? get userName => throw _privateConstructorUsedError;
+  List<String>? get dozvoljeneAkcije => throw _privateConstructorUsedError;
+  String? get email => throw _privateConstructorUsedError;
+  String? get frontendModul => throw _privateConstructorUsedError;
+  String? get frontendModulNaslov => throw _privateConstructorUsedError;
+  String? get punoIme => throw _privateConstructorUsedError;
+  String? get role => throw _privateConstructorUsedError;
+  String? get ulogaId => throw _privateConstructorUsedError;
+  String? get token => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -42,15 +43,16 @@ abstract class $AuthModelCopyWith<$Res> {
       _$AuthModelCopyWithImpl<$Res, AuthModel>;
   @useResult
   $Res call(
-      {String userName,
-      List<String> dozvoljeneAkcije,
-      String email,
-      String frontendModul,
-      String frontendModulNaslov,
-      String punoIme,
-      String role,
-      String ulogaId,
-      String token});
+      {String? userName,
+      List<String>? dozvoljeneAkcije,
+      String? email,
+      String? frontendModul,
+      String? frontendModulNaslov,
+      String? punoIme,
+      String? role,
+      String? ulogaId,
+      String? token,
+      String? id});
 }
 
 /// @nodoc
@@ -66,53 +68,58 @@ class _$AuthModelCopyWithImpl<$Res, $Val extends AuthModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? userName = null,
-    Object? dozvoljeneAkcije = null,
-    Object? email = null,
-    Object? frontendModul = null,
-    Object? frontendModulNaslov = null,
-    Object? punoIme = null,
-    Object? role = null,
-    Object? ulogaId = null,
-    Object? token = null,
+    Object? userName = freezed,
+    Object? dozvoljeneAkcije = freezed,
+    Object? email = freezed,
+    Object? frontendModul = freezed,
+    Object? frontendModulNaslov = freezed,
+    Object? punoIme = freezed,
+    Object? role = freezed,
+    Object? ulogaId = freezed,
+    Object? token = freezed,
+    Object? id = freezed,
   }) {
     return _then(_value.copyWith(
-      userName: null == userName
+      userName: freezed == userName
           ? _value.userName
           : userName // ignore: cast_nullable_to_non_nullable
-              as String,
-      dozvoljeneAkcije: null == dozvoljeneAkcije
+              as String?,
+      dozvoljeneAkcije: freezed == dozvoljeneAkcije
           ? _value.dozvoljeneAkcije
           : dozvoljeneAkcije // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      email: null == email
+              as List<String>?,
+      email: freezed == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
-              as String,
-      frontendModul: null == frontendModul
+              as String?,
+      frontendModul: freezed == frontendModul
           ? _value.frontendModul
           : frontendModul // ignore: cast_nullable_to_non_nullable
-              as String,
-      frontendModulNaslov: null == frontendModulNaslov
+              as String?,
+      frontendModulNaslov: freezed == frontendModulNaslov
           ? _value.frontendModulNaslov
           : frontendModulNaslov // ignore: cast_nullable_to_non_nullable
-              as String,
-      punoIme: null == punoIme
+              as String?,
+      punoIme: freezed == punoIme
           ? _value.punoIme
           : punoIme // ignore: cast_nullable_to_non_nullable
-              as String,
-      role: null == role
+              as String?,
+      role: freezed == role
           ? _value.role
           : role // ignore: cast_nullable_to_non_nullable
-              as String,
-      ulogaId: null == ulogaId
+              as String?,
+      ulogaId: freezed == ulogaId
           ? _value.ulogaId
           : ulogaId // ignore: cast_nullable_to_non_nullable
-              as String,
-      token: null == token
+              as String?,
+      token: freezed == token
           ? _value.token
           : token // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -125,15 +132,16 @@ abstract class _$$_AuthModelCopyWith<$Res> implements $AuthModelCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {String userName,
-      List<String> dozvoljeneAkcije,
-      String email,
-      String frontendModul,
-      String frontendModulNaslov,
-      String punoIme,
-      String role,
-      String ulogaId,
-      String token});
+      {String? userName,
+      List<String>? dozvoljeneAkcije,
+      String? email,
+      String? frontendModul,
+      String? frontendModulNaslov,
+      String? punoIme,
+      String? role,
+      String? ulogaId,
+      String? token,
+      String? id});
 }
 
 /// @nodoc
@@ -147,53 +155,58 @@ class __$$_AuthModelCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? userName = null,
-    Object? dozvoljeneAkcije = null,
-    Object? email = null,
-    Object? frontendModul = null,
-    Object? frontendModulNaslov = null,
-    Object? punoIme = null,
-    Object? role = null,
-    Object? ulogaId = null,
-    Object? token = null,
+    Object? userName = freezed,
+    Object? dozvoljeneAkcije = freezed,
+    Object? email = freezed,
+    Object? frontendModul = freezed,
+    Object? frontendModulNaslov = freezed,
+    Object? punoIme = freezed,
+    Object? role = freezed,
+    Object? ulogaId = freezed,
+    Object? token = freezed,
+    Object? id = freezed,
   }) {
     return _then(_$_AuthModel(
-      userName: null == userName
+      userName: freezed == userName
           ? _value.userName
           : userName // ignore: cast_nullable_to_non_nullable
-              as String,
-      dozvoljeneAkcije: null == dozvoljeneAkcije
+              as String?,
+      dozvoljeneAkcije: freezed == dozvoljeneAkcije
           ? _value._dozvoljeneAkcije
           : dozvoljeneAkcije // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      email: null == email
+              as List<String>?,
+      email: freezed == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
-              as String,
-      frontendModul: null == frontendModul
+              as String?,
+      frontendModul: freezed == frontendModul
           ? _value.frontendModul
           : frontendModul // ignore: cast_nullable_to_non_nullable
-              as String,
-      frontendModulNaslov: null == frontendModulNaslov
+              as String?,
+      frontendModulNaslov: freezed == frontendModulNaslov
           ? _value.frontendModulNaslov
           : frontendModulNaslov // ignore: cast_nullable_to_non_nullable
-              as String,
-      punoIme: null == punoIme
+              as String?,
+      punoIme: freezed == punoIme
           ? _value.punoIme
           : punoIme // ignore: cast_nullable_to_non_nullable
-              as String,
-      role: null == role
+              as String?,
+      role: freezed == role
           ? _value.role
           : role // ignore: cast_nullable_to_non_nullable
-              as String,
-      ulogaId: null == ulogaId
+              as String?,
+      ulogaId: freezed == ulogaId
           ? _value.ulogaId
           : ulogaId // ignore: cast_nullable_to_non_nullable
-              as String,
-      token: null == token
+              as String?,
+      token: freezed == token
           ? _value.token
           : token // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -202,49 +215,54 @@ class __$$_AuthModelCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_AuthModel implements _AuthModel {
   _$_AuthModel(
-      {required this.userName,
-      required final List<String> dozvoljeneAkcije,
-      required this.email,
-      required this.frontendModul,
-      required this.frontendModulNaslov,
-      required this.punoIme,
-      required this.role,
-      required this.ulogaId,
-      required this.token})
+      {this.userName,
+      final List<String>? dozvoljeneAkcije,
+      this.email,
+      this.frontendModul,
+      this.frontendModulNaslov,
+      this.punoIme,
+      this.role,
+      this.ulogaId,
+      this.token,
+      this.id})
       : _dozvoljeneAkcije = dozvoljeneAkcije;
 
   factory _$_AuthModel.fromJson(Map<String, dynamic> json) =>
       _$$_AuthModelFromJson(json);
 
   @override
-  final String userName;
-  final List<String> _dozvoljeneAkcije;
+  final String? userName;
+  final List<String>? _dozvoljeneAkcije;
   @override
-  List<String> get dozvoljeneAkcije {
+  List<String>? get dozvoljeneAkcije {
+    final value = _dozvoljeneAkcije;
+    if (value == null) return null;
     if (_dozvoljeneAkcije is EqualUnmodifiableListView)
       return _dozvoljeneAkcije;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_dozvoljeneAkcije);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
-  final String email;
+  final String? email;
   @override
-  final String frontendModul;
+  final String? frontendModul;
   @override
-  final String frontendModulNaslov;
+  final String? frontendModulNaslov;
   @override
-  final String punoIme;
+  final String? punoIme;
   @override
-  final String role;
+  final String? role;
   @override
-  final String ulogaId;
+  final String? ulogaId;
   @override
-  final String token;
+  final String? token;
+  @override
+  final String? id;
 
   @override
   String toString() {
-    return 'AuthModel(userName: $userName, dozvoljeneAkcije: $dozvoljeneAkcije, email: $email, frontendModul: $frontendModul, frontendModulNaslov: $frontendModulNaslov, punoIme: $punoIme, role: $role, ulogaId: $ulogaId, token: $token)';
+    return 'AuthModel(userName: $userName, dozvoljeneAkcije: $dozvoljeneAkcije, email: $email, frontendModul: $frontendModul, frontendModulNaslov: $frontendModulNaslov, punoIme: $punoIme, role: $role, ulogaId: $ulogaId, token: $token, id: $id)';
   }
 
   @override
@@ -264,7 +282,8 @@ class _$_AuthModel implements _AuthModel {
             (identical(other.punoIme, punoIme) || other.punoIme == punoIme) &&
             (identical(other.role, role) || other.role == role) &&
             (identical(other.ulogaId, ulogaId) || other.ulogaId == ulogaId) &&
-            (identical(other.token, token) || other.token == token));
+            (identical(other.token, token) || other.token == token) &&
+            (identical(other.id, id) || other.id == id));
   }
 
   @JsonKey(ignore: true)
@@ -279,7 +298,8 @@ class _$_AuthModel implements _AuthModel {
       punoIme,
       role,
       ulogaId,
-      token);
+      token,
+      id);
 
   @JsonKey(ignore: true)
   @override
@@ -297,37 +317,40 @@ class _$_AuthModel implements _AuthModel {
 
 abstract class _AuthModel implements AuthModel {
   factory _AuthModel(
-      {required final String userName,
-      required final List<String> dozvoljeneAkcije,
-      required final String email,
-      required final String frontendModul,
-      required final String frontendModulNaslov,
-      required final String punoIme,
-      required final String role,
-      required final String ulogaId,
-      required final String token}) = _$_AuthModel;
+      {final String? userName,
+      final List<String>? dozvoljeneAkcije,
+      final String? email,
+      final String? frontendModul,
+      final String? frontendModulNaslov,
+      final String? punoIme,
+      final String? role,
+      final String? ulogaId,
+      final String? token,
+      final String? id}) = _$_AuthModel;
 
   factory _AuthModel.fromJson(Map<String, dynamic> json) =
       _$_AuthModel.fromJson;
 
   @override
-  String get userName;
+  String? get userName;
   @override
-  List<String> get dozvoljeneAkcije;
+  List<String>? get dozvoljeneAkcije;
   @override
-  String get email;
+  String? get email;
   @override
-  String get frontendModul;
+  String? get frontendModul;
   @override
-  String get frontendModulNaslov;
+  String? get frontendModulNaslov;
   @override
-  String get punoIme;
+  String? get punoIme;
   @override
-  String get role;
+  String? get role;
   @override
-  String get ulogaId;
+  String? get ulogaId;
   @override
-  String get token;
+  String? get token;
+  @override
+  String? get id;
   @override
   @JsonKey(ignore: true)
   _$$_AuthModelCopyWith<_$_AuthModel> get copyWith =>

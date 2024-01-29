@@ -128,7 +128,7 @@ class LoginScreen extends ConsumerWidget {
                   //padding: const EdgeInsets.all(20),
                   child: TextButton.icon(
                     onPressed: () {
-                      loginMock();
+                      login();
                     },
                     label: Text(
                       'Prijavi se',

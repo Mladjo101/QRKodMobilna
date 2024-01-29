@@ -7,17 +7,18 @@ part of 'auth_model.dart';
 // **************************************************************************
 
 _$_AuthModel _$$_AuthModelFromJson(Map<String, dynamic> json) => _$_AuthModel(
-      userName: json['userName'] as String,
-      dozvoljeneAkcije: (json['dozvoljeneAkcije'] as List<dynamic>)
-          .map((e) => e as String)
+      userName: json['userName'] as String?,
+      dozvoljeneAkcije: (json['dozvoljeneAkcije'] as List<dynamic>?)
+          ?.map((e) => e as String)
           .toList(),
-      email: json['email'] as String,
-      frontendModul: json['frontendModul'] as String,
-      frontendModulNaslov: json['frontendModulNaslov'] as String,
-      punoIme: json['punoIme'] as String,
-      role: json['role'] as String,
-      ulogaId: json['ulogaId'] as String,
-      token: json['token'] as String,
+      email: json['email'] as String?,
+      frontendModul: json['frontendModul'] as String?,
+      frontendModulNaslov: json['frontendModulNaslov'] as String?,
+      punoIme: json['punoIme'] as String?,
+      role: json['role'] as String?,
+      ulogaId: json['ulogaId'] as String?,
+      token: json['token'] as String?,
+      id: json['id'] as String?,
     );
 
 Map<String, dynamic> _$$_AuthModelToJson(_$_AuthModel instance) =>
@@ -31,4 +32,5 @@ Map<String, dynamic> _$$_AuthModelToJson(_$_AuthModel instance) =>
       'role': instance.role,
       'ulogaId': instance.ulogaId,
       'token': instance.token,
+      'id': instance.id,
     };

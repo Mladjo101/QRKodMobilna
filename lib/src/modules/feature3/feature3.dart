@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:starter_project_flutter/src/config/color_constants.dart';
 
 class ProfilePageContent extends StatelessWidget {
+  /*Future<void> logout() async {
+    final navigator = Navigator.of(context);
+    await singleton.get<SharedPreferencesHelper>().removeIdentity();
+    navigator.pushNamedAndRemoveUntil("/auth", (route) => false);
+  }*/
   @override
   Widget build(BuildContext context) {
     return Container(

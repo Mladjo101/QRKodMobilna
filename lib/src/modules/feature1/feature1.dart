@@ -5,7 +5,9 @@ import 'package:qr_code_scanner/qr_code_scanner.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:starter_project_flutter/src/config/color_constants.dart';
 import 'package:starter_project_flutter/src/modules/feature1/attendance_card.dart';
+import 'package:starter_project_flutter/src/services/prisustva_service.dart';
 
+import '../../data/models/response/predavanje/predavanje_historija_item.dart';
 import '../../helpers/shared_preferences.dart';
 import '../../startup.dart';
 
@@ -20,10 +22,16 @@ class Feature1State extends ConsumerState<Feature1> {
   final GlobalKey qrKey = GlobalKey(debugLabel: 'QR');
   String? qrText = "";
   QRViewController? controller;
+  late Future<PredavanjeHistorijaItem> prisustva;
   Future<void> logout() async {
     final navigator = Navigator.of(context);
     await singleton.get<SharedPreferencesHelper>().removeIdentity();
     navigator.pushNamedAndRemoveUntil("/auth", (route) => false);
+  }
+  @override
+  void initState(){
+    prisustva = PrisustvaService().getPrisustva();
+    super.initState();
   }
 
   List<Map<String, String>> recentAttendance = [

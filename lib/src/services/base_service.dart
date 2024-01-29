@@ -23,9 +23,9 @@ abstract class BaseService {
 class DioClient {
   final _dio = Dio(
     BaseOptions(
-      baseUrl: 'http://127.0.0.1:8000/',
-      connectTimeout: 5000,
-      receiveTimeout: 3000,
+      baseUrl: 'https://0e61-147-161-130-102.ngrok-free.app/',
+      connectTimeout: 50000,
+      receiveTimeout: 30000,
       responseType: ResponseType.json,
     ),
   );
@@ -60,7 +60,7 @@ class DioInterceptor extends Interceptor {
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
     if (options.headers["No-Authorization"] != true && identity != null) {
-      options.headers['Authorization'] = "Bearer " + identity!.token;
+      options.headers['Authorization'] = "Bearer " + identity!.token!;
     }
     super.onRequest(options, handler);
   }
