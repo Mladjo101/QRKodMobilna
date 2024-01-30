@@ -6,6 +6,16 @@ import 'package:starter_project_flutter/src/services/prisustva_service.dart';
 import 'package:starter_project_flutter/src/startup.dart';
 
 class ProfilePageContent extends StatelessWidget {
+  Color hexToColor(String hex) {
+    assert(RegExp(r'^#([0-9a-fA-F]{6})|([0-9a-fA-F]{8})$').hasMatch(hex),
+        'hex color must be #rrggbb or #rrggbbaa');
+
+    return Color(
+      int.parse(hex.substring(1), radix: 16) +
+          (hex.length == 7 ? 0xff000000 : 0x00000000),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     Future<void> logout() async {
@@ -39,7 +49,7 @@ class ProfilePageContent extends StatelessWidget {
                     SizedBox(height: 20),
                     _buildProfileField('Name', profile.firstName ?? 'N/A'),
                     _buildProfileField('Surname', profile.lastName ?? 'N/A'),
-                    _buildProfileField('Role', profile.role ?? 'N/A'),
+                    // _buildProfileField('Role', profile.role ?? 'N/A'),
                     _buildProfileField('Email', profile.email ?? 'N/A'),
                     Padding(
                         padding: const EdgeInsets.all(16.0),
@@ -49,9 +59,14 @@ class ProfilePageContent extends StatelessWidget {
                           },
                           child: Text('Odjava'),
                           style: ElevatedButton.styleFrom(
-                            minimumSize: Size(
-                                double.infinity, 50), // make the button stretch
-                          ),
+                              foregroundColor: Color.fromARGB(255, 24, 33, 56),
+                              minimumSize: Size(double.infinity, 50),
+                              side: BorderSide.none,
+                              textStyle: TextStyle(
+                                color: Color.fromARGB(255, 24, 33, 56),
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              )),
                         ))
                   ],
                 ),

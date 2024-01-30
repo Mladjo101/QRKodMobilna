@@ -38,7 +38,7 @@ class PrisustvaService extends BaseService {
     var model = await singleton.get<SharedPreferencesHelper>().getIdentity();
     var korisnikId = model!.id ?? '';
 
-    final response = await dio.get('api/user/profile/$korisnikId');
+    final response = await dio.get('api/user/profil/$korisnikId');
     return UserProfile.fromJson(response.data);
   }
 
