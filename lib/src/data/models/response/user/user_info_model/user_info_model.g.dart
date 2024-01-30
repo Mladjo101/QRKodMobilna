@@ -6,8 +6,8 @@ part of 'user_info_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_UserInfoModel _$$_UserInfoModelFromJson(Map<String, dynamic> json) =>
-    _$_UserInfoModel(
+_$UserInfoModelImpl _$$UserInfoModelImplFromJson(Map<String, dynamic> json) =>
+    _$UserInfoModelImpl(
       dodatneInformacije: json['dodatneInformacije'] as String,
       dozvoljeneAkcije: (json['dozvoljeneAkcije'] as List<dynamic>)
           .map((e) => e as String)
@@ -24,7 +24,7 @@ _$_UserInfoModel _$$_UserInfoModelFromJson(Map<String, dynamic> json) =>
       ulogaId: json['ulogaId'] as String,
     );
 
-Map<String, dynamic> _$$_UserInfoModelToJson(_$_UserInfoModel instance) =>
+Map<String, dynamic> _$$UserInfoModelImplToJson(_$UserInfoModelImpl instance) =>
     <String, dynamic>{
       'dodatneInformacije': instance.dodatneInformacije,
       'dozvoljeneAkcije': instance.dozvoljeneAkcije,

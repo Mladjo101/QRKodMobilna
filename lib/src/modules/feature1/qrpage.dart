@@ -6,6 +6,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:starter_project_flutter/src/config/color_constants.dart';
+import 'package:starter_project_flutter/src/services/prisustva_service.dart';
 
 import '../../helpers/shared_preferences.dart';
 import '../../startup.dart';
@@ -42,9 +43,20 @@ class QRPageState extends ConsumerState<QRPage> {
     }
   }
 
-  void confirmScan(String qrContent) {
+  void confirmScan(String qrContent) async {
     //Call and await the api here an then move to the attendance page
-    //
+    try {
+      await PrisustvaService().scanCode(qrContent);
+    } catch (e) {
+      Navigator.pop(context);
+
+      final snackBar = SnackBar(
+        content: Text("Greška pri registrovanju prisustva"),
+        duration: Duration(seconds: 3),
+      );
+
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+    }
     final snackBar = SnackBar(
       content: Text("Uspješno registrovanje prisustva"),
       duration: Duration(seconds: 3),

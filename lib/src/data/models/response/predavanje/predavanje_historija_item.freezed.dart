@@ -70,23 +70,25 @@ class _$PredavanjeHistorijaItemCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_PredavanjeHistorijaItemCopyWith<$Res>
+abstract class _$$PredavanjeHistorijaItemImplCopyWith<$Res>
     implements $PredavanjeHistorijaItemCopyWith<$Res> {
-  factory _$$_PredavanjeHistorijaItemCopyWith(_$_PredavanjeHistorijaItem value,
-          $Res Function(_$_PredavanjeHistorijaItem) then) =
-      __$$_PredavanjeHistorijaItemCopyWithImpl<$Res>;
+  factory _$$PredavanjeHistorijaItemImplCopyWith(
+          _$PredavanjeHistorijaItemImpl value,
+          $Res Function(_$PredavanjeHistorijaItemImpl) then) =
+      __$$PredavanjeHistorijaItemImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({DateTime? datumPredavanja, String? nazivPredmeta});
 }
 
 /// @nodoc
-class __$$_PredavanjeHistorijaItemCopyWithImpl<$Res>
+class __$$PredavanjeHistorijaItemImplCopyWithImpl<$Res>
     extends _$PredavanjeHistorijaItemCopyWithImpl<$Res,
-        _$_PredavanjeHistorijaItem>
-    implements _$$_PredavanjeHistorijaItemCopyWith<$Res> {
-  __$$_PredavanjeHistorijaItemCopyWithImpl(_$_PredavanjeHistorijaItem _value,
-      $Res Function(_$_PredavanjeHistorijaItem) _then)
+        _$PredavanjeHistorijaItemImpl>
+    implements _$$PredavanjeHistorijaItemImplCopyWith<$Res> {
+  __$$PredavanjeHistorijaItemImplCopyWithImpl(
+      _$PredavanjeHistorijaItemImpl _value,
+      $Res Function(_$PredavanjeHistorijaItemImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -95,7 +97,7 @@ class __$$_PredavanjeHistorijaItemCopyWithImpl<$Res>
     Object? datumPredavanja = freezed,
     Object? nazivPredmeta = freezed,
   }) {
-    return _then(_$_PredavanjeHistorijaItem(
+    return _then(_$PredavanjeHistorijaItemImpl(
       datumPredavanja: freezed == datumPredavanja
           ? _value.datumPredavanja
           : datumPredavanja // ignore: cast_nullable_to_non_nullable
@@ -110,11 +112,11 @@ class __$$_PredavanjeHistorijaItemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PredavanjeHistorijaItem implements _PredavanjeHistorijaItem {
-  _$_PredavanjeHistorijaItem({this.datumPredavanja, this.nazivPredmeta});
+class _$PredavanjeHistorijaItemImpl implements _PredavanjeHistorijaItem {
+  _$PredavanjeHistorijaItemImpl({this.datumPredavanja, this.nazivPredmeta});
 
-  factory _$_PredavanjeHistorijaItem.fromJson(Map<String, dynamic> json) =>
-      _$$_PredavanjeHistorijaItemFromJson(json);
+  factory _$PredavanjeHistorijaItemImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PredavanjeHistorijaItemImplFromJson(json);
 
   @override
   final DateTime? datumPredavanja;
@@ -127,10 +129,10 @@ class _$_PredavanjeHistorijaItem implements _PredavanjeHistorijaItem {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PredavanjeHistorijaItem &&
+            other is _$PredavanjeHistorijaItemImpl &&
             (identical(other.datumPredavanja, datumPredavanja) ||
                 other.datumPredavanja == datumPredavanja) &&
             (identical(other.nazivPredmeta, nazivPredmeta) ||
@@ -144,14 +146,13 @@ class _$_PredavanjeHistorijaItem implements _PredavanjeHistorijaItem {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PredavanjeHistorijaItemCopyWith<_$_PredavanjeHistorijaItem>
-      get copyWith =>
-          __$$_PredavanjeHistorijaItemCopyWithImpl<_$_PredavanjeHistorijaItem>(
-              this, _$identity);
+  _$$PredavanjeHistorijaItemImplCopyWith<_$PredavanjeHistorijaItemImpl>
+      get copyWith => __$$PredavanjeHistorijaItemImplCopyWithImpl<
+          _$PredavanjeHistorijaItemImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PredavanjeHistorijaItemToJson(
+    return _$$PredavanjeHistorijaItemImplToJson(
       this,
     );
   }
@@ -160,10 +161,10 @@ class _$_PredavanjeHistorijaItem implements _PredavanjeHistorijaItem {
 abstract class _PredavanjeHistorijaItem implements PredavanjeHistorijaItem {
   factory _PredavanjeHistorijaItem(
       {final DateTime? datumPredavanja,
-      final String? nazivPredmeta}) = _$_PredavanjeHistorijaItem;
+      final String? nazivPredmeta}) = _$PredavanjeHistorijaItemImpl;
 
   factory _PredavanjeHistorijaItem.fromJson(Map<String, dynamic> json) =
-      _$_PredavanjeHistorijaItem.fromJson;
+      _$PredavanjeHistorijaItemImpl.fromJson;
 
   @override
   DateTime? get datumPredavanja;
@@ -171,6 +172,6 @@ abstract class _PredavanjeHistorijaItem implements PredavanjeHistorijaItem {
   String? get nazivPredmeta;
   @override
   @JsonKey(ignore: true)
-  _$$_PredavanjeHistorijaItemCopyWith<_$_PredavanjeHistorijaItem>
+  _$$PredavanjeHistorijaItemImplCopyWith<_$PredavanjeHistorijaItemImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

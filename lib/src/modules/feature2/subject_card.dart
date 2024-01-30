@@ -90,7 +90,7 @@ class SubjectCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      '12/15',
+                      '$attendedClasses/$totalClasses',
                       style: TextStyle(
                         fontSize: 12,
                         color: hexToColor("#00426C"),

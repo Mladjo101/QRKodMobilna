@@ -6,8 +6,8 @@ part of 'role_list_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_RoleListModel _$$_RoleListModelFromJson(Map<String, dynamic> json) =>
-    _$_RoleListModel(
+_$RoleListModelImpl _$$RoleListModelImplFromJson(Map<String, dynamic> json) =>
+    _$RoleListModelImpl(
       email: json['email'] as String?,
       firstName: json['firstName'] as String?,
       lastName: json['lastName'] as String?,
@@ -19,7 +19,7 @@ _$_RoleListModel _$$_RoleListModelFromJson(Map<String, dynamic> json) =>
       imePrezime: json['imePrezime'] as String?,
     );
 
-Map<String, dynamic> _$$_RoleListModelToJson(_$_RoleListModel instance) =>
+Map<String, dynamic> _$$RoleListModelImplToJson(_$RoleListModelImpl instance) =>
     <String, dynamic>{
       'email': instance.email,
       'firstName': instance.firstName,

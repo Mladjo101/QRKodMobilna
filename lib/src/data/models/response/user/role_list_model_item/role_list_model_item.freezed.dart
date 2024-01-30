@@ -74,22 +74,22 @@ class _$RoleListModelItemCopyWithImpl<$Res, $Val extends RoleListModelItem>
 }
 
 /// @nodoc
-abstract class _$$_RoleListModelItemCopyWith<$Res>
+abstract class _$$RoleListModelItemImplCopyWith<$Res>
     implements $RoleListModelItemCopyWith<$Res> {
-  factory _$$_RoleListModelItemCopyWith(_$_RoleListModelItem value,
-          $Res Function(_$_RoleListModelItem) then) =
-      __$$_RoleListModelItemCopyWithImpl<$Res>;
+  factory _$$RoleListModelItemImplCopyWith(_$RoleListModelItemImpl value,
+          $Res Function(_$RoleListModelItemImpl) then) =
+      __$$RoleListModelItemImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int id, String naziv, int? vrijednostUAplikaciji});
 }
 
 /// @nodoc
-class __$$_RoleListModelItemCopyWithImpl<$Res>
-    extends _$RoleListModelItemCopyWithImpl<$Res, _$_RoleListModelItem>
-    implements _$$_RoleListModelItemCopyWith<$Res> {
-  __$$_RoleListModelItemCopyWithImpl(
-      _$_RoleListModelItem _value, $Res Function(_$_RoleListModelItem) _then)
+class __$$RoleListModelItemImplCopyWithImpl<$Res>
+    extends _$RoleListModelItemCopyWithImpl<$Res, _$RoleListModelItemImpl>
+    implements _$$RoleListModelItemImplCopyWith<$Res> {
+  __$$RoleListModelItemImplCopyWithImpl(_$RoleListModelItemImpl _value,
+      $Res Function(_$RoleListModelItemImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -99,7 +99,7 @@ class __$$_RoleListModelItemCopyWithImpl<$Res>
     Object? naziv = null,
     Object? vrijednostUAplikaciji = freezed,
   }) {
-    return _then(_$_RoleListModelItem(
+    return _then(_$RoleListModelItemImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -118,12 +118,12 @@ class __$$_RoleListModelItemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_RoleListModelItem implements _RoleListModelItem {
-  _$_RoleListModelItem(
+class _$RoleListModelItemImpl implements _RoleListModelItem {
+  _$RoleListModelItemImpl(
       {required this.id, required this.naziv, this.vrijednostUAplikaciji});
 
-  factory _$_RoleListModelItem.fromJson(Map<String, dynamic> json) =>
-      _$$_RoleListModelItemFromJson(json);
+  factory _$RoleListModelItemImpl.fromJson(Map<String, dynamic> json) =>
+      _$$RoleListModelItemImplFromJson(json);
 
   @override
   final int id;
@@ -138,10 +138,10 @@ class _$_RoleListModelItem implements _RoleListModelItem {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_RoleListModelItem &&
+            other is _$RoleListModelItemImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.naziv, naziv) || other.naziv == naziv) &&
             (identical(other.vrijednostUAplikaciji, vrijednostUAplikaciji) ||
@@ -156,13 +156,13 @@ class _$_RoleListModelItem implements _RoleListModelItem {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_RoleListModelItemCopyWith<_$_RoleListModelItem> get copyWith =>
-      __$$_RoleListModelItemCopyWithImpl<_$_RoleListModelItem>(
+  _$$RoleListModelItemImplCopyWith<_$RoleListModelItemImpl> get copyWith =>
+      __$$RoleListModelItemImplCopyWithImpl<_$RoleListModelItemImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RoleListModelItemToJson(
+    return _$$RoleListModelItemImplToJson(
       this,
     );
   }
@@ -172,10 +172,10 @@ abstract class _RoleListModelItem implements RoleListModelItem {
   factory _RoleListModelItem(
       {required final int id,
       required final String naziv,
-      final int? vrijednostUAplikaciji}) = _$_RoleListModelItem;
+      final int? vrijednostUAplikaciji}) = _$RoleListModelItemImpl;
 
   factory _RoleListModelItem.fromJson(Map<String, dynamic> json) =
-      _$_RoleListModelItem.fromJson;
+      _$RoleListModelItemImpl.fromJson;
 
   @override
   int get id;
@@ -185,6 +185,6 @@ abstract class _RoleListModelItem implements RoleListModelItem {
   int? get vrijednostUAplikaciji;
   @override
   @JsonKey(ignore: true)
-  _$$_RoleListModelItemCopyWith<_$_RoleListModelItem> get copyWith =>
+  _$$RoleListModelItemImplCopyWith<_$RoleListModelItemImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

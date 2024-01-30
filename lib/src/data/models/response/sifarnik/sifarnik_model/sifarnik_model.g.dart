@@ -6,8 +6,8 @@ part of 'sifarnik_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SifarnikModel _$$_SifarnikModelFromJson(Map<String, dynamic> json) =>
-    _$_SifarnikModel(
+_$SifarnikModelImpl _$$SifarnikModelImplFromJson(Map<String, dynamic> json) =>
+    _$SifarnikModelImpl(
       id: json['id'] as int,
       naziv: json['naziv'] as String?,
       sifra: json['sifra'] as String?,
@@ -20,7 +20,7 @@ _$_SifarnikModel _$$_SifarnikModelFromJson(Map<String, dynamic> json) =>
           : DateTime.parse(json['datumIzmjene'] as String),
     );
 
-Map<String, dynamic> _$$_SifarnikModelToJson(_$_SifarnikModel instance) =>
+Map<String, dynamic> _$$SifarnikModelImplToJson(_$SifarnikModelImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'naziv': instance.naziv,

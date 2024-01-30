@@ -22,14 +22,29 @@ class Feature1State extends ConsumerState<Feature1> {
   final GlobalKey qrKey = GlobalKey(debugLabel: 'QR');
   String? qrText = "";
   QRViewController? controller;
-  late Future<PredavanjeHistorijaItem> prisustva;
+  List<String> months = [
+    "JAN",
+    "FEB",
+    "MAR",
+    "APR",
+    "MAJ",
+    "JUN",
+    "JUL",
+    "AUG",
+    "SEP",
+    "OKT",
+    "NOV",
+    "DEC"
+  ];
+  late Future<List<PredavanjeHistorijaItem>> prisustva;
   Future<void> logout() async {
     final navigator = Navigator.of(context);
     await singleton.get<SharedPreferencesHelper>().removeIdentity();
     navigator.pushNamedAndRemoveUntil("/auth", (route) => false);
   }
+
   @override
-  void initState(){
+  void initState() {
     prisustva = PrisustvaService().getPrisustva();
     super.initState();
   }
@@ -184,25 +199,57 @@ class Feature1State extends ConsumerState<Feature1> {
               Container(
                 padding: EdgeInsets.only(left: 15),
                 width: (MediaQuery.of(context).size.width / 100) * 95,
-                child: ListView.builder(
-                  shrinkWrap: true,
-                  physics: NeverScrollableScrollPhysics(),
-                  itemCount: recentAttendance.length,
-                  itemBuilder: (context, index) {
-                    return Column(
-                      children: [
-                        AttendanceCard(
-                          day: recentAttendance[index]["day"]!,
-                          month: recentAttendance[index]["month"]!,
-                          className: recentAttendance[index]["className"]!,
-                          time: recentAttendance[index]["time"]!,
-                        ),
-                        SizedBox(height: 20),
-                      ],
-                    );
+                child: FutureBuilder<List<PredavanjeHistorijaItem>>(
+                  future: PrisustvaService()
+                      .getPrisustva(), // Your function that returns a Future
+                  builder: (BuildContext context,
+                      AsyncSnapshot<List<PredavanjeHistorijaItem>> snapshot) {
+                    if (snapshot.connectionState == ConnectionState.waiting) {
+                      // While waiting for the data, show a loading indicator
+                      return Center(child: CircularProgressIndicator());
+                    } else if (snapshot.hasError) {
+                      // Handle the error case
+                      return Text("Error: ${snapshot.error}");
+                    } else if (snapshot.hasData) {
+                      // If we got data, show it in a list view
+                      return ListView.builder(
+                        shrinkWrap: true,
+                        physics: NeverScrollableScrollPhysics(),
+                        itemCount: snapshot.data!.length,
+                        itemBuilder: (context, index) {
+                          var attendanceItem = snapshot.data![index];
+                          return Column(
+                            children: [
+                              AttendanceCard(
+                                day: attendanceItem.datumPredavanja?.day
+                                        .toString() ??
+                                    " ", // Assuming these are properties of PredavanjeHistorijaItem
+                                month: months[
+                                        attendanceItem.datumPredavanja!.month -
+                                            1] ??
+                                    " ",
+                                className: attendanceItem.nazivPredmeta ?? " ",
+                                time: (attendanceItem.datumPredavanja?.hour
+                                            .toString() ??
+                                        " ") +
+                                    "h " +
+                                    (attendanceItem.datumPredavanja?.hour
+                                            .toString() ??
+                                        " ") +
+                                    "m",
+                              ),
+                              SizedBox(height: 20),
+                            ],
+                          );
+                        },
+                      );
+                    } else {
+                      // Handle the case when there's no data
+                      return Text("No data available");
+                    }
                   },
                 ),
-              ),
+              )
             ],
           ),
         ));

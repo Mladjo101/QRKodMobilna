@@ -76,23 +76,25 @@ class _$RegisterPredavanjeModelCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_RegisterPredavanjeModelCopyWith<$Res>
+abstract class _$$RegisterPredavanjeModelImplCopyWith<$Res>
     implements $RegisterPredavanjeModelCopyWith<$Res> {
-  factory _$$_RegisterPredavanjeModelCopyWith(_$_RegisterPredavanjeModel value,
-          $Res Function(_$_RegisterPredavanjeModel) then) =
-      __$$_RegisterPredavanjeModelCopyWithImpl<$Res>;
+  factory _$$RegisterPredavanjeModelImplCopyWith(
+          _$RegisterPredavanjeModelImpl value,
+          $Res Function(_$RegisterPredavanjeModelImpl) then) =
+      __$$RegisterPredavanjeModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? predavanjeId, String? korisnikId, DateTime? imePrezime});
 }
 
 /// @nodoc
-class __$$_RegisterPredavanjeModelCopyWithImpl<$Res>
+class __$$RegisterPredavanjeModelImplCopyWithImpl<$Res>
     extends _$RegisterPredavanjeModelCopyWithImpl<$Res,
-        _$_RegisterPredavanjeModel>
-    implements _$$_RegisterPredavanjeModelCopyWith<$Res> {
-  __$$_RegisterPredavanjeModelCopyWithImpl(_$_RegisterPredavanjeModel _value,
-      $Res Function(_$_RegisterPredavanjeModel) _then)
+        _$RegisterPredavanjeModelImpl>
+    implements _$$RegisterPredavanjeModelImplCopyWith<$Res> {
+  __$$RegisterPredavanjeModelImplCopyWithImpl(
+      _$RegisterPredavanjeModelImpl _value,
+      $Res Function(_$RegisterPredavanjeModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -102,7 +104,7 @@ class __$$_RegisterPredavanjeModelCopyWithImpl<$Res>
     Object? korisnikId = freezed,
     Object? imePrezime = freezed,
   }) {
-    return _then(_$_RegisterPredavanjeModel(
+    return _then(_$RegisterPredavanjeModelImpl(
       predavanjeId: freezed == predavanjeId
           ? _value.predavanjeId
           : predavanjeId // ignore: cast_nullable_to_non_nullable
@@ -121,12 +123,12 @@ class __$$_RegisterPredavanjeModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_RegisterPredavanjeModel implements _RegisterPredavanjeModel {
-  _$_RegisterPredavanjeModel(
+class _$RegisterPredavanjeModelImpl implements _RegisterPredavanjeModel {
+  _$RegisterPredavanjeModelImpl(
       {this.predavanjeId, this.korisnikId, this.imePrezime});
 
-  factory _$_RegisterPredavanjeModel.fromJson(Map<String, dynamic> json) =>
-      _$$_RegisterPredavanjeModelFromJson(json);
+  factory _$RegisterPredavanjeModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$RegisterPredavanjeModelImplFromJson(json);
 
   @override
   final String? predavanjeId;
@@ -141,10 +143,10 @@ class _$_RegisterPredavanjeModel implements _RegisterPredavanjeModel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_RegisterPredavanjeModel &&
+            other is _$RegisterPredavanjeModelImpl &&
             (identical(other.predavanjeId, predavanjeId) ||
                 other.predavanjeId == predavanjeId) &&
             (identical(other.korisnikId, korisnikId) ||
@@ -161,14 +163,13 @@ class _$_RegisterPredavanjeModel implements _RegisterPredavanjeModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_RegisterPredavanjeModelCopyWith<_$_RegisterPredavanjeModel>
-      get copyWith =>
-          __$$_RegisterPredavanjeModelCopyWithImpl<_$_RegisterPredavanjeModel>(
-              this, _$identity);
+  _$$RegisterPredavanjeModelImplCopyWith<_$RegisterPredavanjeModelImpl>
+      get copyWith => __$$RegisterPredavanjeModelImplCopyWithImpl<
+          _$RegisterPredavanjeModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RegisterPredavanjeModelToJson(
+    return _$$RegisterPredavanjeModelImplToJson(
       this,
     );
   }
@@ -178,10 +179,10 @@ abstract class _RegisterPredavanjeModel implements RegisterPredavanjeModel {
   factory _RegisterPredavanjeModel(
       {final String? predavanjeId,
       final String? korisnikId,
-      final DateTime? imePrezime}) = _$_RegisterPredavanjeModel;
+      final DateTime? imePrezime}) = _$RegisterPredavanjeModelImpl;
 
   factory _RegisterPredavanjeModel.fromJson(Map<String, dynamic> json) =
-      _$_RegisterPredavanjeModel.fromJson;
+      _$RegisterPredavanjeModelImpl.fromJson;
 
   @override
   String? get predavanjeId;
@@ -191,6 +192,6 @@ abstract class _RegisterPredavanjeModel implements RegisterPredavanjeModel {
   DateTime? get imePrezime;
   @override
   @JsonKey(ignore: true)
-  _$$_RegisterPredavanjeModelCopyWith<_$_RegisterPredavanjeModel>
+  _$$RegisterPredavanjeModelImplCopyWith<_$RegisterPredavanjeModelImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

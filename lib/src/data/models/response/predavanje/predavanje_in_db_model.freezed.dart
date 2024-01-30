@@ -91,11 +91,11 @@ class _$PredavanjeInDBModelCopyWithImpl<$Res, $Val extends PredavanjeInDBModel>
 }
 
 /// @nodoc
-abstract class _$$_PredavanjeInDBModelCopyWith<$Res>
+abstract class _$$PredavanjeInDBModelImplCopyWith<$Res>
     implements $PredavanjeInDBModelCopyWith<$Res> {
-  factory _$$_PredavanjeInDBModelCopyWith(_$_PredavanjeInDBModel value,
-          $Res Function(_$_PredavanjeInDBModel) then) =
-      __$$_PredavanjeInDBModelCopyWithImpl<$Res>;
+  factory _$$PredavanjeInDBModelImplCopyWith(_$PredavanjeInDBModelImpl value,
+          $Res Function(_$PredavanjeInDBModelImpl) then) =
+      __$$PredavanjeInDBModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -107,11 +107,11 @@ abstract class _$$_PredavanjeInDBModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PredavanjeInDBModelCopyWithImpl<$Res>
-    extends _$PredavanjeInDBModelCopyWithImpl<$Res, _$_PredavanjeInDBModel>
-    implements _$$_PredavanjeInDBModelCopyWith<$Res> {
-  __$$_PredavanjeInDBModelCopyWithImpl(_$_PredavanjeInDBModel _value,
-      $Res Function(_$_PredavanjeInDBModel) _then)
+class __$$PredavanjeInDBModelImplCopyWithImpl<$Res>
+    extends _$PredavanjeInDBModelCopyWithImpl<$Res, _$PredavanjeInDBModelImpl>
+    implements _$$PredavanjeInDBModelImplCopyWith<$Res> {
+  __$$PredavanjeInDBModelImplCopyWithImpl(_$PredavanjeInDBModelImpl _value,
+      $Res Function(_$PredavanjeInDBModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -123,7 +123,7 @@ class __$$_PredavanjeInDBModelCopyWithImpl<$Res>
     Object? imePrezime = freezed,
     Object? nazivPredavanja = freezed,
   }) {
-    return _then(_$_PredavanjeInDBModel(
+    return _then(_$PredavanjeInDBModelImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -150,16 +150,16 @@ class __$$_PredavanjeInDBModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PredavanjeInDBModel implements _PredavanjeInDBModel {
-  _$_PredavanjeInDBModel(
+class _$PredavanjeInDBModelImpl implements _PredavanjeInDBModel {
+  _$PredavanjeInDBModelImpl(
       {this.id,
       this.predavanjeId,
       this.korisnikId,
       this.imePrezime,
       this.nazivPredavanja});
 
-  factory _$_PredavanjeInDBModel.fromJson(Map<String, dynamic> json) =>
-      _$$_PredavanjeInDBModelFromJson(json);
+  factory _$PredavanjeInDBModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PredavanjeInDBModelImplFromJson(json);
 
   @override
   final String? id;
@@ -178,10 +178,10 @@ class _$_PredavanjeInDBModel implements _PredavanjeInDBModel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PredavanjeInDBModel &&
+            other is _$PredavanjeInDBModelImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.predavanjeId, predavanjeId) ||
                 other.predavanjeId == predavanjeId) &&
@@ -201,13 +201,13 @@ class _$_PredavanjeInDBModel implements _PredavanjeInDBModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PredavanjeInDBModelCopyWith<_$_PredavanjeInDBModel> get copyWith =>
-      __$$_PredavanjeInDBModelCopyWithImpl<_$_PredavanjeInDBModel>(
+  _$$PredavanjeInDBModelImplCopyWith<_$PredavanjeInDBModelImpl> get copyWith =>
+      __$$PredavanjeInDBModelImplCopyWithImpl<_$PredavanjeInDBModelImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PredavanjeInDBModelToJson(
+    return _$$PredavanjeInDBModelImplToJson(
       this,
     );
   }
@@ -219,10 +219,10 @@ abstract class _PredavanjeInDBModel implements PredavanjeInDBModel {
       final String? predavanjeId,
       final String? korisnikId,
       final DateTime? imePrezime,
-      final String? nazivPredavanja}) = _$_PredavanjeInDBModel;
+      final String? nazivPredavanja}) = _$PredavanjeInDBModelImpl;
 
   factory _PredavanjeInDBModel.fromJson(Map<String, dynamic> json) =
-      _$_PredavanjeInDBModel.fromJson;
+      _$PredavanjeInDBModelImpl.fromJson;
 
   @override
   String? get id;
@@ -236,6 +236,6 @@ abstract class _PredavanjeInDBModel implements PredavanjeInDBModel {
   String? get nazivPredavanja;
   @override
   @JsonKey(ignore: true)
-  _$$_PredavanjeInDBModelCopyWith<_$_PredavanjeInDBModel> get copyWith =>
+  _$$PredavanjeInDBModelImplCopyWith<_$PredavanjeInDBModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

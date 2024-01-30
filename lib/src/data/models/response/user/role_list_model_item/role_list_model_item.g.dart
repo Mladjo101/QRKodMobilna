@@ -6,15 +6,16 @@ part of 'role_list_model_item.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_RoleListModelItem _$$_RoleListModelItemFromJson(Map<String, dynamic> json) =>
-    _$_RoleListModelItem(
+_$RoleListModelItemImpl _$$RoleListModelItemImplFromJson(
+        Map<String, dynamic> json) =>
+    _$RoleListModelItemImpl(
       id: json['id'] as int,
       naziv: json['naziv'] as String,
       vrijednostUAplikaciji: json['vrijednostUAplikaciji'] as int?,
     );
 
-Map<String, dynamic> _$$_RoleListModelItemToJson(
-        _$_RoleListModelItem instance) =>
+Map<String, dynamic> _$$RoleListModelItemImplToJson(
+        _$RoleListModelItemImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'naziv': instance.naziv,

@@ -6,8 +6,8 @@ part of 'postavke_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PostavkeModel _$$_PostavkeModelFromJson(Map<String, dynamic> json) =>
-    _$_PostavkeModel(
+_$PostavkeModelImpl _$$PostavkeModelImplFromJson(Map<String, dynamic> json) =>
+    _$PostavkeModelImpl(
       naslovSistema: json['naslovSistema'] as String?,
       trajanjeSesije: json['trajanjeSesije'] as int,
       urlKarte: json['urlKarte'] as String?,
@@ -30,7 +30,7 @@ _$_PostavkeModel _$$_PostavkeModelFromJson(Map<String, dynamic> json) =>
       defaultStateId: json['defaultStateId'] as int?,
     );
 
-Map<String, dynamic> _$$_PostavkeModelToJson(_$_PostavkeModel instance) =>
+Map<String, dynamic> _$$PostavkeModelImplToJson(_$PostavkeModelImpl instance) =>
     <String, dynamic>{
       'naslovSistema': instance.naslovSistema,
       'trajanjeSesije': instance.trajanjeSesije,

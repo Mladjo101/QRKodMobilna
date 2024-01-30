@@ -6,7 +6,8 @@ part of 'auth_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_AuthModel _$$_AuthModelFromJson(Map<String, dynamic> json) => _$_AuthModel(
+_$AuthModelImpl _$$AuthModelImplFromJson(Map<String, dynamic> json) =>
+    _$AuthModelImpl(
       userName: json['userName'] as String?,
       dozvoljeneAkcije: (json['dozvoljeneAkcije'] as List<dynamic>?)
           ?.map((e) => e as String)
@@ -19,9 +20,11 @@ _$_AuthModel _$$_AuthModelFromJson(Map<String, dynamic> json) => _$_AuthModel(
       ulogaId: json['ulogaId'] as String?,
       token: json['token'] as String?,
       id: json['id'] as String?,
+      firstName: json['firstName'] as String?,
+      lastName: json['lastName'] as String?,
     );
 
-Map<String, dynamic> _$$_AuthModelToJson(_$_AuthModel instance) =>
+Map<String, dynamic> _$$AuthModelImplToJson(_$AuthModelImpl instance) =>
     <String, dynamic>{
       'userName': instance.userName,
       'dozvoljeneAkcije': instance.dozvoljeneAkcije,
@@ -33,4 +36,6 @@ Map<String, dynamic> _$$_AuthModelToJson(_$_AuthModel instance) =>
       'ulogaId': instance.ulogaId,
       'token': instance.token,
       'id': instance.id,
+      'firstName': instance.firstName,
+      'lastName': instance.lastName,
     };

@@ -191,11 +191,11 @@ class _$PostavkeModelCopyWithImpl<$Res, $Val extends PostavkeModel>
 }
 
 /// @nodoc
-abstract class _$$_PostavkeModelCopyWith<$Res>
+abstract class _$$PostavkeModelImplCopyWith<$Res>
     implements $PostavkeModelCopyWith<$Res> {
-  factory _$$_PostavkeModelCopyWith(
-          _$_PostavkeModel value, $Res Function(_$_PostavkeModel) then) =
-      __$$_PostavkeModelCopyWithImpl<$Res>;
+  factory _$$PostavkeModelImplCopyWith(
+          _$PostavkeModelImpl value, $Res Function(_$PostavkeModelImpl) then) =
+      __$$PostavkeModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -221,11 +221,11 @@ abstract class _$$_PostavkeModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PostavkeModelCopyWithImpl<$Res>
-    extends _$PostavkeModelCopyWithImpl<$Res, _$_PostavkeModel>
-    implements _$$_PostavkeModelCopyWith<$Res> {
-  __$$_PostavkeModelCopyWithImpl(
-      _$_PostavkeModel _value, $Res Function(_$_PostavkeModel) _then)
+class __$$PostavkeModelImplCopyWithImpl<$Res>
+    extends _$PostavkeModelCopyWithImpl<$Res, _$PostavkeModelImpl>
+    implements _$$PostavkeModelImplCopyWith<$Res> {
+  __$$PostavkeModelImplCopyWithImpl(
+      _$PostavkeModelImpl _value, $Res Function(_$PostavkeModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -251,7 +251,7 @@ class __$$_PostavkeModelCopyWithImpl<$Res>
     Object? saljiFaktureEmail = null,
     Object? defaultStateId = freezed,
   }) {
-    return _then(_$_PostavkeModel(
+    return _then(_$PostavkeModelImpl(
       naslovSistema: freezed == naslovSistema
           ? _value.naslovSistema
           : naslovSistema // ignore: cast_nullable_to_non_nullable
@@ -335,8 +335,8 @@ class __$$_PostavkeModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PostavkeModel implements _PostavkeModel {
-  _$_PostavkeModel(
+class _$PostavkeModelImpl implements _PostavkeModel {
+  _$PostavkeModelImpl(
       {this.naslovSistema,
       required this.trajanjeSesije,
       this.urlKarte,
@@ -357,8 +357,8 @@ class _$_PostavkeModel implements _PostavkeModel {
       required this.saljiFaktureEmail,
       this.defaultStateId});
 
-  factory _$_PostavkeModel.fromJson(Map<String, dynamic> json) =>
-      _$$_PostavkeModelFromJson(json);
+  factory _$PostavkeModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PostavkeModelImplFromJson(json);
 
   @override
   final String? naslovSistema;
@@ -405,10 +405,10 @@ class _$_PostavkeModel implements _PostavkeModel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PostavkeModel &&
+            other is _$PostavkeModelImpl &&
             (identical(other.naslovSistema, naslovSistema) ||
                 other.naslovSistema == naslovSistema) &&
             (identical(other.trajanjeSesije, trajanjeSesije) ||
@@ -481,12 +481,12 @@ class _$_PostavkeModel implements _PostavkeModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PostavkeModelCopyWith<_$_PostavkeModel> get copyWith =>
-      __$$_PostavkeModelCopyWithImpl<_$_PostavkeModel>(this, _$identity);
+  _$$PostavkeModelImplCopyWith<_$PostavkeModelImpl> get copyWith =>
+      __$$PostavkeModelImplCopyWithImpl<_$PostavkeModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PostavkeModelToJson(
+    return _$$PostavkeModelImplToJson(
       this,
     );
   }
@@ -512,10 +512,10 @@ abstract class _PostavkeModel implements PostavkeModel {
       final int? defaultVatId,
       required final bool saljiFaktureWebService,
       required final bool saljiFaktureEmail,
-      final int? defaultStateId}) = _$_PostavkeModel;
+      final int? defaultStateId}) = _$PostavkeModelImpl;
 
   factory _PostavkeModel.fromJson(Map<String, dynamic> json) =
-      _$_PostavkeModel.fromJson;
+      _$PostavkeModelImpl.fromJson;
 
   @override
   String? get naslovSistema;
@@ -557,6 +557,6 @@ abstract class _PostavkeModel implements PostavkeModel {
   int? get defaultStateId;
   @override
   @JsonKey(ignore: true)
-  _$$_PostavkeModelCopyWith<_$_PostavkeModel> get copyWith =>
+  _$$PostavkeModelImplCopyWith<_$PostavkeModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

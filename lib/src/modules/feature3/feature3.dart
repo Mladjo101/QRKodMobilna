@@ -1,36 +1,66 @@
 import 'package:flutter/material.dart';
 import 'package:starter_project_flutter/src/config/color_constants.dart';
+import 'package:starter_project_flutter/src/helpers/shared_preferences.dart';
+import 'package:starter_project_flutter/src/modules/feature3/user_profile.dart';
+import 'package:starter_project_flutter/src/services/prisustva_service.dart';
+import 'package:starter_project_flutter/src/startup.dart';
 
 class ProfilePageContent extends StatelessWidget {
-  /*Future<void> logout() async {
-    final navigator = Navigator.of(context);
-    await singleton.get<SharedPreferencesHelper>().removeIdentity();
-    navigator.pushNamedAndRemoveUntil("/auth", (route) => false);
-  }*/
   @override
   Widget build(BuildContext context) {
+    Future<void> logout() async {
+      final navigator = Navigator.of(context);
+      await singleton.get<SharedPreferencesHelper>().removeIdentity();
+      navigator.pushNamedAndRemoveUntil("/auth", (route) => false);
+    }
+
     return Container(
-      color: Color.fromARGB(255, 24, 33, 56),
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            SizedBox(height: 60),
-            CircleAvatar(
-              radius: 50, // Adjust the size as needed
-              backgroundImage: AssetImage(
-                  'assets/avatar.jpg'), // Placeholder for profile picture
-            ),
-            SizedBox(height: 20),
-            _buildProfileField('Name', 'John Doe'),
-            _buildProfileField('Surname', 'Doe'),
-            _buildProfileField('Index Number', '123456'),
-            _buildProfileField('Email', 'john.doe@example.com'),
-          ],
-        ),
-      ),
-    );
+        color: Color.fromARGB(255, 24, 33, 56),
+        child: FutureBuilder<UserProfile>(
+          future: PrisustvaService().fetchUserProfile(),
+          builder: (context, snapshot) {
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return CircularProgressIndicator();
+            } else if (snapshot.hasError) {
+              return Text('Error: ${snapshot.error}');
+            } else if (snapshot.hasData) {
+              UserProfile profile = snapshot.data!;
+              return Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    SizedBox(height: 60),
+                    CircleAvatar(
+                      radius: 50,
+                      backgroundImage: AssetImage(
+                          'assets/avatar.jpg'), // Consider fetching an actual image URL
+                    ),
+                    SizedBox(height: 20),
+                    _buildProfileField('Name', profile.firstName ?? 'N/A'),
+                    _buildProfileField('Surname', profile.lastName ?? 'N/A'),
+                    _buildProfileField('Role', profile.role ?? 'N/A'),
+                    _buildProfileField('Email', profile.email ?? 'N/A'),
+                    Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: ElevatedButton(
+                          onPressed: () async {
+                            await logout();
+                          },
+                          child: Text('Odjava'),
+                          style: ElevatedButton.styleFrom(
+                            minimumSize: Size(
+                                double.infinity, 50), // make the button stretch
+                          ),
+                        ))
+                  ],
+                ),
+              );
+            } else {
+              return Text("No data available");
+            }
+          },
+        ));
   }
 
   Widget _buildProfileField(String label, String value) {

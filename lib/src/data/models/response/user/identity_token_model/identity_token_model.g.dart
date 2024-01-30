@@ -6,9 +6,9 @@ part of 'identity_token_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_IdentityTokenModel _$$_IdentityTokenModelFromJson(
+_$IdentityTokenModelImpl _$$IdentityTokenModelImplFromJson(
         Map<String, dynamic> json) =>
-    _$_IdentityTokenModel(
+    _$IdentityTokenModelImpl(
       access_token: json['access_token'] as String,
       expires_in: json['expires_in'] as int,
       refresh_token: json['refresh_token'] as String,
@@ -16,8 +16,8 @@ _$_IdentityTokenModel _$$_IdentityTokenModelFromJson(
       token_type: json['token_type'] as String,
     );
 
-Map<String, dynamic> _$$_IdentityTokenModelToJson(
-        _$_IdentityTokenModel instance) =>
+Map<String, dynamic> _$$IdentityTokenModelImplToJson(
+        _$IdentityTokenModelImpl instance) =>
     <String, dynamic>{
       'access_token': instance.access_token,
       'expires_in': instance.expires_in,

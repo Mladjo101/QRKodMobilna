@@ -30,6 +30,8 @@ mixin _$AuthModel {
   String? get ulogaId => throw _privateConstructorUsedError;
   String? get token => throw _privateConstructorUsedError;
   String? get id => throw _privateConstructorUsedError;
+  String? get firstName => throw _privateConstructorUsedError;
+  String? get lastName => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -52,7 +54,9 @@ abstract class $AuthModelCopyWith<$Res> {
       String? role,
       String? ulogaId,
       String? token,
-      String? id});
+      String? id,
+      String? firstName,
+      String? lastName});
 }
 
 /// @nodoc
@@ -78,6 +82,8 @@ class _$AuthModelCopyWithImpl<$Res, $Val extends AuthModel>
     Object? ulogaId = freezed,
     Object? token = freezed,
     Object? id = freezed,
+    Object? firstName = freezed,
+    Object? lastName = freezed,
   }) {
     return _then(_value.copyWith(
       userName: freezed == userName
@@ -120,15 +126,24 @@ class _$AuthModelCopyWithImpl<$Res, $Val extends AuthModel>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
+      firstName: freezed == firstName
+          ? _value.firstName
+          : firstName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      lastName: freezed == lastName
+          ? _value.lastName
+          : lastName // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$_AuthModelCopyWith<$Res> implements $AuthModelCopyWith<$Res> {
-  factory _$$_AuthModelCopyWith(
-          _$_AuthModel value, $Res Function(_$_AuthModel) then) =
-      __$$_AuthModelCopyWithImpl<$Res>;
+abstract class _$$AuthModelImplCopyWith<$Res>
+    implements $AuthModelCopyWith<$Res> {
+  factory _$$AuthModelImplCopyWith(
+          _$AuthModelImpl value, $Res Function(_$AuthModelImpl) then) =
+      __$$AuthModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -141,15 +156,17 @@ abstract class _$$_AuthModelCopyWith<$Res> implements $AuthModelCopyWith<$Res> {
       String? role,
       String? ulogaId,
       String? token,
-      String? id});
+      String? id,
+      String? firstName,
+      String? lastName});
 }
 
 /// @nodoc
-class __$$_AuthModelCopyWithImpl<$Res>
-    extends _$AuthModelCopyWithImpl<$Res, _$_AuthModel>
-    implements _$$_AuthModelCopyWith<$Res> {
-  __$$_AuthModelCopyWithImpl(
-      _$_AuthModel _value, $Res Function(_$_AuthModel) _then)
+class __$$AuthModelImplCopyWithImpl<$Res>
+    extends _$AuthModelCopyWithImpl<$Res, _$AuthModelImpl>
+    implements _$$AuthModelImplCopyWith<$Res> {
+  __$$AuthModelImplCopyWithImpl(
+      _$AuthModelImpl _value, $Res Function(_$AuthModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -165,8 +182,10 @@ class __$$_AuthModelCopyWithImpl<$Res>
     Object? ulogaId = freezed,
     Object? token = freezed,
     Object? id = freezed,
+    Object? firstName = freezed,
+    Object? lastName = freezed,
   }) {
-    return _then(_$_AuthModel(
+    return _then(_$AuthModelImpl(
       userName: freezed == userName
           ? _value.userName
           : userName // ignore: cast_nullable_to_non_nullable
@@ -207,14 +226,22 @@ class __$$_AuthModelCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
+      firstName: freezed == firstName
+          ? _value.firstName
+          : firstName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      lastName: freezed == lastName
+          ? _value.lastName
+          : lastName // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_AuthModel implements _AuthModel {
-  _$_AuthModel(
+class _$AuthModelImpl implements _AuthModel {
+  _$AuthModelImpl(
       {this.userName,
       final List<String>? dozvoljeneAkcije,
       this.email,
@@ -224,11 +251,13 @@ class _$_AuthModel implements _AuthModel {
       this.role,
       this.ulogaId,
       this.token,
-      this.id})
+      this.id,
+      this.firstName,
+      this.lastName})
       : _dozvoljeneAkcije = dozvoljeneAkcije;
 
-  factory _$_AuthModel.fromJson(Map<String, dynamic> json) =>
-      _$$_AuthModelFromJson(json);
+  factory _$AuthModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AuthModelImplFromJson(json);
 
   @override
   final String? userName;
@@ -259,17 +288,21 @@ class _$_AuthModel implements _AuthModel {
   final String? token;
   @override
   final String? id;
+  @override
+  final String? firstName;
+  @override
+  final String? lastName;
 
   @override
   String toString() {
-    return 'AuthModel(userName: $userName, dozvoljeneAkcije: $dozvoljeneAkcije, email: $email, frontendModul: $frontendModul, frontendModulNaslov: $frontendModulNaslov, punoIme: $punoIme, role: $role, ulogaId: $ulogaId, token: $token, id: $id)';
+    return 'AuthModel(userName: $userName, dozvoljeneAkcije: $dozvoljeneAkcije, email: $email, frontendModul: $frontendModul, frontendModulNaslov: $frontendModulNaslov, punoIme: $punoIme, role: $role, ulogaId: $ulogaId, token: $token, id: $id, firstName: $firstName, lastName: $lastName)';
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AuthModel &&
+            other is _$AuthModelImpl &&
             (identical(other.userName, userName) ||
                 other.userName == userName) &&
             const DeepCollectionEquality()
@@ -283,7 +316,11 @@ class _$_AuthModel implements _AuthModel {
             (identical(other.role, role) || other.role == role) &&
             (identical(other.ulogaId, ulogaId) || other.ulogaId == ulogaId) &&
             (identical(other.token, token) || other.token == token) &&
-            (identical(other.id, id) || other.id == id));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.firstName, firstName) ||
+                other.firstName == firstName) &&
+            (identical(other.lastName, lastName) ||
+                other.lastName == lastName));
   }
 
   @JsonKey(ignore: true)
@@ -299,17 +336,19 @@ class _$_AuthModel implements _AuthModel {
       role,
       ulogaId,
       token,
-      id);
+      id,
+      firstName,
+      lastName);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AuthModelCopyWith<_$_AuthModel> get copyWith =>
-      __$$_AuthModelCopyWithImpl<_$_AuthModel>(this, _$identity);
+  _$$AuthModelImplCopyWith<_$AuthModelImpl> get copyWith =>
+      __$$AuthModelImplCopyWithImpl<_$AuthModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AuthModelToJson(
+    return _$$AuthModelImplToJson(
       this,
     );
   }
@@ -326,10 +365,12 @@ abstract class _AuthModel implements AuthModel {
       final String? role,
       final String? ulogaId,
       final String? token,
-      final String? id}) = _$_AuthModel;
+      final String? id,
+      final String? firstName,
+      final String? lastName}) = _$AuthModelImpl;
 
   factory _AuthModel.fromJson(Map<String, dynamic> json) =
-      _$_AuthModel.fromJson;
+      _$AuthModelImpl.fromJson;
 
   @override
   String? get userName;
@@ -352,7 +393,11 @@ abstract class _AuthModel implements AuthModel {
   @override
   String? get id;
   @override
+  String? get firstName;
+  @override
+  String? get lastName;
+  @override
   @JsonKey(ignore: true)
-  _$$_AuthModelCopyWith<_$_AuthModel> get copyWith =>
+  _$$AuthModelImplCopyWith<_$AuthModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

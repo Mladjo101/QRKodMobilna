@@ -140,11 +140,11 @@ class _$UserInfoModelCopyWithImpl<$Res, $Val extends UserInfoModel>
 }
 
 /// @nodoc
-abstract class _$$_UserInfoModelCopyWith<$Res>
+abstract class _$$UserInfoModelImplCopyWith<$Res>
     implements $UserInfoModelCopyWith<$Res> {
-  factory _$$_UserInfoModelCopyWith(
-          _$_UserInfoModel value, $Res Function(_$_UserInfoModel) then) =
-      __$$_UserInfoModelCopyWithImpl<$Res>;
+  factory _$$UserInfoModelImplCopyWith(
+          _$UserInfoModelImpl value, $Res Function(_$UserInfoModelImpl) then) =
+      __$$UserInfoModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -163,11 +163,11 @@ abstract class _$$_UserInfoModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_UserInfoModelCopyWithImpl<$Res>
-    extends _$UserInfoModelCopyWithImpl<$Res, _$_UserInfoModel>
-    implements _$$_UserInfoModelCopyWith<$Res> {
-  __$$_UserInfoModelCopyWithImpl(
-      _$_UserInfoModel _value, $Res Function(_$_UserInfoModel) _then)
+class __$$UserInfoModelImplCopyWithImpl<$Res>
+    extends _$UserInfoModelCopyWithImpl<$Res, _$UserInfoModelImpl>
+    implements _$$UserInfoModelImplCopyWith<$Res> {
+  __$$UserInfoModelImplCopyWithImpl(
+      _$UserInfoModelImpl _value, $Res Function(_$UserInfoModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -186,7 +186,7 @@ class __$$_UserInfoModelCopyWithImpl<$Res>
     Object? sub = null,
     Object? ulogaId = null,
   }) {
-    return _then(_$_UserInfoModel(
+    return _then(_$UserInfoModelImpl(
       dodatneInformacije: null == dodatneInformacije
           ? _value.dodatneInformacije
           : dodatneInformacije // ignore: cast_nullable_to_non_nullable
@@ -241,8 +241,8 @@ class __$$_UserInfoModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_UserInfoModel implements _UserInfoModel {
-  _$_UserInfoModel(
+class _$UserInfoModelImpl implements _UserInfoModel {
+  _$UserInfoModelImpl(
       {required this.dodatneInformacije,
       required final List<String> dozvoljeneAkcije,
       required this.email,
@@ -257,8 +257,8 @@ class _$_UserInfoModel implements _UserInfoModel {
       required this.ulogaId})
       : _dozvoljeneAkcije = dozvoljeneAkcije;
 
-  factory _$_UserInfoModel.fromJson(Map<String, dynamic> json) =>
-      _$$_UserInfoModelFromJson(json);
+  factory _$UserInfoModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$UserInfoModelImplFromJson(json);
 
   @override
   final String dodatneInformacije;
@@ -298,10 +298,10 @@ class _$_UserInfoModel implements _UserInfoModel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_UserInfoModel &&
+            other is _$UserInfoModelImpl &&
             (identical(other.dodatneInformacije, dodatneInformacije) ||
                 other.dodatneInformacije == dodatneInformacije) &&
             const DeepCollectionEquality()
@@ -342,12 +342,12 @@ class _$_UserInfoModel implements _UserInfoModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_UserInfoModelCopyWith<_$_UserInfoModel> get copyWith =>
-      __$$_UserInfoModelCopyWithImpl<_$_UserInfoModel>(this, _$identity);
+  _$$UserInfoModelImplCopyWith<_$UserInfoModelImpl> get copyWith =>
+      __$$UserInfoModelImplCopyWithImpl<_$UserInfoModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_UserInfoModelToJson(
+    return _$$UserInfoModelImplToJson(
       this,
     );
   }
@@ -366,10 +366,10 @@ abstract class _UserInfoModel implements UserInfoModel {
       required final String punoIme,
       required final String role,
       required final String sub,
-      required final String ulogaId}) = _$_UserInfoModel;
+      required final String ulogaId}) = _$UserInfoModelImpl;
 
   factory _UserInfoModel.fromJson(Map<String, dynamic> json) =
-      _$_UserInfoModel.fromJson;
+      _$UserInfoModelImpl.fromJson;
 
   @override
   String get dodatneInformacije;
@@ -397,6 +397,6 @@ abstract class _UserInfoModel implements UserInfoModel {
   String get ulogaId;
   @override
   @JsonKey(ignore: true)
-  _$$_UserInfoModelCopyWith<_$_UserInfoModel> get copyWith =>
+  _$$UserInfoModelImplCopyWith<_$UserInfoModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

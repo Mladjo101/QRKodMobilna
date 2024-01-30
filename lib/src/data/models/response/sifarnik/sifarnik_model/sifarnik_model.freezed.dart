@@ -112,11 +112,11 @@ class _$SifarnikModelCopyWithImpl<$Res, $Val extends SifarnikModel>
 }
 
 /// @nodoc
-abstract class _$$_SifarnikModelCopyWith<$Res>
+abstract class _$$SifarnikModelImplCopyWith<$Res>
     implements $SifarnikModelCopyWith<$Res> {
-  factory _$$_SifarnikModelCopyWith(
-          _$_SifarnikModel value, $Res Function(_$_SifarnikModel) then) =
-      __$$_SifarnikModelCopyWithImpl<$Res>;
+  factory _$$SifarnikModelImplCopyWith(
+          _$SifarnikModelImpl value, $Res Function(_$SifarnikModelImpl) then) =
+      __$$SifarnikModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -131,11 +131,11 @@ abstract class _$$_SifarnikModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SifarnikModelCopyWithImpl<$Res>
-    extends _$SifarnikModelCopyWithImpl<$Res, _$_SifarnikModel>
-    implements _$$_SifarnikModelCopyWith<$Res> {
-  __$$_SifarnikModelCopyWithImpl(
-      _$_SifarnikModel _value, $Res Function(_$_SifarnikModel) _then)
+class __$$SifarnikModelImplCopyWithImpl<$Res>
+    extends _$SifarnikModelCopyWithImpl<$Res, _$SifarnikModelImpl>
+    implements _$$SifarnikModelImplCopyWith<$Res> {
+  __$$SifarnikModelImplCopyWithImpl(
+      _$SifarnikModelImpl _value, $Res Function(_$SifarnikModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -150,7 +150,7 @@ class __$$_SifarnikModelCopyWithImpl<$Res>
     Object? hex = freezed,
     Object? datumIzmjene = freezed,
   }) {
-    return _then(_$_SifarnikModel(
+    return _then(_$SifarnikModelImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -189,8 +189,8 @@ class __$$_SifarnikModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SifarnikModel implements _SifarnikModel {
-  _$_SifarnikModel(
+class _$SifarnikModelImpl implements _SifarnikModel {
+  _$SifarnikModelImpl(
       {required this.id,
       this.naziv,
       this.sifra,
@@ -200,8 +200,8 @@ class _$_SifarnikModel implements _SifarnikModel {
       this.hex,
       this.datumIzmjene});
 
-  factory _$_SifarnikModel.fromJson(Map<String, dynamic> json) =>
-      _$$_SifarnikModelFromJson(json);
+  factory _$SifarnikModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SifarnikModelImplFromJson(json);
 
   @override
   final int id;
@@ -226,10 +226,10 @@ class _$_SifarnikModel implements _SifarnikModel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SifarnikModel &&
+            other is _$SifarnikModelImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.naziv, naziv) || other.naziv == naziv) &&
             (identical(other.sifra, sifra) || other.sifra == sifra) &&
@@ -250,12 +250,12 @@ class _$_SifarnikModel implements _SifarnikModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SifarnikModelCopyWith<_$_SifarnikModel> get copyWith =>
-      __$$_SifarnikModelCopyWithImpl<_$_SifarnikModel>(this, _$identity);
+  _$$SifarnikModelImplCopyWith<_$SifarnikModelImpl> get copyWith =>
+      __$$SifarnikModelImplCopyWithImpl<_$SifarnikModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SifarnikModelToJson(
+    return _$$SifarnikModelImplToJson(
       this,
     );
   }
@@ -270,10 +270,10 @@ abstract class _SifarnikModel implements SifarnikModel {
       required final int poredak,
       required final bool prvi,
       final String? hex,
-      final DateTime? datumIzmjene}) = _$_SifarnikModel;
+      final DateTime? datumIzmjene}) = _$SifarnikModelImpl;
 
   factory _SifarnikModel.fromJson(Map<String, dynamic> json) =
-      _$_SifarnikModel.fromJson;
+      _$SifarnikModelImpl.fromJson;
 
   @override
   int get id;
@@ -293,6 +293,6 @@ abstract class _SifarnikModel implements SifarnikModel {
   DateTime? get datumIzmjene;
   @override
   @JsonKey(ignore: true)
-  _$$_SifarnikModelCopyWith<_$_SifarnikModel> get copyWith =>
+  _$$SifarnikModelImplCopyWith<_$SifarnikModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

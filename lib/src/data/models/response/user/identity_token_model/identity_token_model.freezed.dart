@@ -91,11 +91,11 @@ class _$IdentityTokenModelCopyWithImpl<$Res, $Val extends IdentityTokenModel>
 }
 
 /// @nodoc
-abstract class _$$_IdentityTokenModelCopyWith<$Res>
+abstract class _$$IdentityTokenModelImplCopyWith<$Res>
     implements $IdentityTokenModelCopyWith<$Res> {
-  factory _$$_IdentityTokenModelCopyWith(_$_IdentityTokenModel value,
-          $Res Function(_$_IdentityTokenModel) then) =
-      __$$_IdentityTokenModelCopyWithImpl<$Res>;
+  factory _$$IdentityTokenModelImplCopyWith(_$IdentityTokenModelImpl value,
+          $Res Function(_$IdentityTokenModelImpl) then) =
+      __$$IdentityTokenModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -107,11 +107,11 @@ abstract class _$$_IdentityTokenModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_IdentityTokenModelCopyWithImpl<$Res>
-    extends _$IdentityTokenModelCopyWithImpl<$Res, _$_IdentityTokenModel>
-    implements _$$_IdentityTokenModelCopyWith<$Res> {
-  __$$_IdentityTokenModelCopyWithImpl(
-      _$_IdentityTokenModel _value, $Res Function(_$_IdentityTokenModel) _then)
+class __$$IdentityTokenModelImplCopyWithImpl<$Res>
+    extends _$IdentityTokenModelCopyWithImpl<$Res, _$IdentityTokenModelImpl>
+    implements _$$IdentityTokenModelImplCopyWith<$Res> {
+  __$$IdentityTokenModelImplCopyWithImpl(_$IdentityTokenModelImpl _value,
+      $Res Function(_$IdentityTokenModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -123,7 +123,7 @@ class __$$_IdentityTokenModelCopyWithImpl<$Res>
     Object? scope = null,
     Object? token_type = null,
   }) {
-    return _then(_$_IdentityTokenModel(
+    return _then(_$IdentityTokenModelImpl(
       access_token: null == access_token
           ? _value.access_token
           : access_token // ignore: cast_nullable_to_non_nullable
@@ -150,16 +150,16 @@ class __$$_IdentityTokenModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_IdentityTokenModel implements _IdentityTokenModel {
-  _$_IdentityTokenModel(
+class _$IdentityTokenModelImpl implements _IdentityTokenModel {
+  _$IdentityTokenModelImpl(
       {required this.access_token,
       required this.expires_in,
       required this.refresh_token,
       required this.scope,
       required this.token_type});
 
-  factory _$_IdentityTokenModel.fromJson(Map<String, dynamic> json) =>
-      _$$_IdentityTokenModelFromJson(json);
+  factory _$IdentityTokenModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$IdentityTokenModelImplFromJson(json);
 
   @override
   final String access_token;
@@ -178,10 +178,10 @@ class _$_IdentityTokenModel implements _IdentityTokenModel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_IdentityTokenModel &&
+            other is _$IdentityTokenModelImpl &&
             (identical(other.access_token, access_token) ||
                 other.access_token == access_token) &&
             (identical(other.expires_in, expires_in) ||
@@ -201,13 +201,13 @@ class _$_IdentityTokenModel implements _IdentityTokenModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_IdentityTokenModelCopyWith<_$_IdentityTokenModel> get copyWith =>
-      __$$_IdentityTokenModelCopyWithImpl<_$_IdentityTokenModel>(
+  _$$IdentityTokenModelImplCopyWith<_$IdentityTokenModelImpl> get copyWith =>
+      __$$IdentityTokenModelImplCopyWithImpl<_$IdentityTokenModelImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_IdentityTokenModelToJson(
+    return _$$IdentityTokenModelImplToJson(
       this,
     );
   }
@@ -219,10 +219,10 @@ abstract class _IdentityTokenModel implements IdentityTokenModel {
       required final int expires_in,
       required final String refresh_token,
       required final String scope,
-      required final String token_type}) = _$_IdentityTokenModel;
+      required final String token_type}) = _$IdentityTokenModelImpl;
 
   factory _IdentityTokenModel.fromJson(Map<String, dynamic> json) =
-      _$_IdentityTokenModel.fromJson;
+      _$IdentityTokenModelImpl.fromJson;
 
   @override
   String get access_token;
@@ -236,6 +236,6 @@ abstract class _IdentityTokenModel implements IdentityTokenModel {
   String get token_type;
   @override
   @JsonKey(ignore: true)
-  _$$_IdentityTokenModelCopyWith<_$_IdentityTokenModel> get copyWith =>
+  _$$IdentityTokenModelImplCopyWith<_$IdentityTokenModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

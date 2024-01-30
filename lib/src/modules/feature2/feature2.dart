@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:starter_project_flutter/src/config/color_constants.dart';
+import 'package:starter_project_flutter/src/modules/feature2/subject.dart';
 import 'package:starter_project_flutter/src/modules/feature2/subject_card.dart';
+import 'package:starter_project_flutter/src/services/prisustva_service.dart';
 
 import '../../identity/auth_provider.dart';
 
@@ -125,30 +127,41 @@ class Feature2State extends ConsumerState<Feature2> {
                     ),
                   ),
                   SizedBox(height: 20),
-                  ListView.builder(
-                    shrinkWrap: true,
-                    physics: NeverScrollableScrollPhysics(),
-                    itemCount: subjectList
-                        .length, // Assuming subjectList is defined somewhere
-                    itemBuilder: (context, index) {
-                      return Column(
-                        children: [
-                          SubjectCard(
-                            subjectName:
-                                subjectList[index]["subjectName"] ?? '',
-                            totalClasses:
-                                subjectList[index]["totalClasses"] ?? 0,
-                            attendedClasses:
-                                subjectList[index]["attendedClasses"] ?? 0,
-                            onTap: () {
-                              print("Subject Card Tapped!");
-                            },
-                          ),
-                          SizedBox(height: 20),
-                        ],
-                      );
+                  FutureBuilder<List<Subject>>(
+                    future: PrisustvaService().fetchSubjects(),
+                    builder: (context, snapshot) {
+                      if (snapshot.connectionState == ConnectionState.waiting) {
+                        return Center(child: CircularProgressIndicator());
+                      } else if (snapshot.hasError) {
+                        return Text('Error: ${snapshot.error}');
+                      } else if (snapshot.hasData) {
+                        List<Subject> subjects = snapshot.data!;
+                        return ListView.builder(
+                          shrinkWrap: true,
+                          physics: NeverScrollableScrollPhysics(),
+                          itemCount: subjects.length,
+                          itemBuilder: (context, index) {
+                            Subject subject = subjects[index];
+                            return Column(
+                              children: [
+                                SubjectCard(
+                                  subjectName: subject.nazivPredmeta ?? '',
+                                  totalClasses: subject.odrzanih ?? 0,
+                                  attendedClasses: subject.prisutnih ?? 0,
+                                  onTap: () {
+                                    print("Subject Card Tapped!");
+                                  },
+                                ),
+                                SizedBox(height: 20),
+                              ],
+                            );
+                          },
+                        );
+                      } else {
+                        return Text("No data available");
+                      }
                     },
-                  ),
+                  )
                 ],
               ))),
     );

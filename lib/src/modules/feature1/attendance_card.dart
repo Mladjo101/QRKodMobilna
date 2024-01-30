@@ -57,31 +57,14 @@ class AttendanceCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    className,
+                    className.toUpperCase(),
                     style: TextStyle(
                       color: Color.fromARGB(255, 24, 33, 56),
-                      fontSize: 18,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   SizedBox(height: 2),
-                  Container(
-                    margin: EdgeInsets.only(top: 2),
-                    width: MediaQuery.of(context)!.size.width,
-                    height: 1,
-                    decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 24, 33, 56),
-                      borderRadius: BorderRadius.circular(50),
-                    ),
-                  ),
-                  SizedBox(height: 2), // Add some space between the two widgets
-                  Text(
-                    "Vrijeme predavanja:  " + time,
-                    style: TextStyle(
-                      color: Color.fromARGB(255, 24, 33, 56),
-                      fontSize: 16,
-                    ),
-                  ),
                 ],
               ),
             ),

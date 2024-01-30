@@ -6,9 +6,9 @@ part of 'predavanje_in_db_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PredavanjeInDBModel _$$_PredavanjeInDBModelFromJson(
+_$PredavanjeInDBModelImpl _$$PredavanjeInDBModelImplFromJson(
         Map<String, dynamic> json) =>
-    _$_PredavanjeInDBModel(
+    _$PredavanjeInDBModelImpl(
       id: json['id'] as String?,
       predavanjeId: json['predavanjeId'] as String?,
       korisnikId: json['korisnikId'] as String?,
@@ -18,8 +18,8 @@ _$_PredavanjeInDBModel _$$_PredavanjeInDBModelFromJson(
       nazivPredavanja: json['nazivPredavanja'] as String?,
     );
 
-Map<String, dynamic> _$$_PredavanjeInDBModelToJson(
-        _$_PredavanjeInDBModel instance) =>
+Map<String, dynamic> _$$PredavanjeInDBModelImplToJson(
+        _$PredavanjeInDBModelImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'predavanjeId': instance.predavanjeId,

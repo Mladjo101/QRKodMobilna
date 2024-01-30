@@ -34,7 +34,7 @@ class AuthService {
 class DioClient {
   final _dio = Dio(
     BaseOptions(
-      baseUrl: 'https://0e61-147-161-130-102.ngrok-free.app/',
+      baseUrl: 'https://3ec6-147-161-130-119.ngrok-free.app/',
       connectTimeout: 50000,
       receiveTimeout: 30000,
       responseType: ResponseType.json,

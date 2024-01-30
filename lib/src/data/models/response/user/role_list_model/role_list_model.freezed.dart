@@ -105,11 +105,11 @@ class _$RoleListModelCopyWithImpl<$Res, $Val extends RoleListModel>
 }
 
 /// @nodoc
-abstract class _$$_RoleListModelCopyWith<$Res>
+abstract class _$$RoleListModelImplCopyWith<$Res>
     implements $RoleListModelCopyWith<$Res> {
-  factory _$$_RoleListModelCopyWith(
-          _$_RoleListModel value, $Res Function(_$_RoleListModel) then) =
-      __$$_RoleListModelCopyWithImpl<$Res>;
+  factory _$$RoleListModelImplCopyWith(
+          _$RoleListModelImpl value, $Res Function(_$RoleListModelImpl) then) =
+      __$$RoleListModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -123,11 +123,11 @@ abstract class _$$_RoleListModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_RoleListModelCopyWithImpl<$Res>
-    extends _$RoleListModelCopyWithImpl<$Res, _$_RoleListModel>
-    implements _$$_RoleListModelCopyWith<$Res> {
-  __$$_RoleListModelCopyWithImpl(
-      _$_RoleListModel _value, $Res Function(_$_RoleListModel) _then)
+class __$$RoleListModelImplCopyWithImpl<$Res>
+    extends _$RoleListModelCopyWithImpl<$Res, _$RoleListModelImpl>
+    implements _$$RoleListModelImplCopyWith<$Res> {
+  __$$RoleListModelImplCopyWithImpl(
+      _$RoleListModelImpl _value, $Res Function(_$RoleListModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -141,7 +141,7 @@ class __$$_RoleListModelCopyWithImpl<$Res>
     Object? id = freezed,
     Object? imePrezime = freezed,
   }) {
-    return _then(_$_RoleListModel(
+    return _then(_$RoleListModelImpl(
       email: freezed == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
@@ -176,8 +176,8 @@ class __$$_RoleListModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_RoleListModel implements _RoleListModel {
-  _$_RoleListModel(
+class _$RoleListModelImpl implements _RoleListModel {
+  _$RoleListModelImpl(
       {this.email,
       this.firstName,
       this.lastName,
@@ -186,8 +186,8 @@ class _$_RoleListModel implements _RoleListModel {
       this.id,
       this.imePrezime});
 
-  factory _$_RoleListModel.fromJson(Map<String, dynamic> json) =>
-      _$$_RoleListModelFromJson(json);
+  factory _$RoleListModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$RoleListModelImplFromJson(json);
 
   @override
   final String? email;
@@ -210,10 +210,10 @@ class _$_RoleListModel implements _RoleListModel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_RoleListModel &&
+            other is _$RoleListModelImpl &&
             (identical(other.email, email) || other.email == email) &&
             (identical(other.firstName, firstName) ||
                 other.firstName == firstName) &&
@@ -235,12 +235,12 @@ class _$_RoleListModel implements _RoleListModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_RoleListModelCopyWith<_$_RoleListModel> get copyWith =>
-      __$$_RoleListModelCopyWithImpl<_$_RoleListModel>(this, _$identity);
+  _$$RoleListModelImplCopyWith<_$RoleListModelImpl> get copyWith =>
+      __$$RoleListModelImplCopyWithImpl<_$RoleListModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RoleListModelToJson(
+    return _$$RoleListModelImplToJson(
       this,
     );
   }
@@ -254,10 +254,10 @@ abstract class _RoleListModel implements RoleListModel {
       final DateTime? dateOfBirth,
       final String? token,
       final String? id,
-      final String? imePrezime}) = _$_RoleListModel;
+      final String? imePrezime}) = _$RoleListModelImpl;
 
   factory _RoleListModel.fromJson(Map<String, dynamic> json) =
-      _$_RoleListModel.fromJson;
+      _$RoleListModelImpl.fromJson;
 
   @override
   String? get email;
@@ -275,6 +275,6 @@ abstract class _RoleListModel implements RoleListModel {
   String? get imePrezime;
   @override
   @JsonKey(ignore: true)
-  _$$_RoleListModelCopyWith<_$_RoleListModel> get copyWith =>
+  _$$RoleListModelImplCopyWith<_$RoleListModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
