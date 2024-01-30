@@ -59,14 +59,18 @@ class ProfilePageContent extends StatelessWidget {
                           },
                           child: Text('Odjava'),
                           style: ElevatedButton.styleFrom(
-                              foregroundColor: Color.fromARGB(255, 24, 33, 56),
-                              minimumSize: Size(double.infinity, 50),
-                              side: BorderSide.none,
-                              textStyle: TextStyle(
-                                color: Color.fromARGB(255, 24, 33, 56),
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
-                              )),
+                            foregroundColor: Color.fromARGB(255, 24, 33, 56),
+
+                            minimumSize: Size(double.infinity, 50),
+                            side: BorderSide.none,
+                            textStyle: TextStyle(
+                              color: Color.fromARGB(255, 24, 33, 56),
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            elevation: 6, // This sets the size of the shadow
+                            shadowColor: Colors.white,
+                          ),
                         ))
                   ],
                 ),
